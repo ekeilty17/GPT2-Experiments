@@ -96,4 +96,4 @@ if __name__ == "__main__":
     df = test_conditioning(args.model, args.num_shots)
 
     print("saving to csv")
-    df.to_csv('injecting_negative_examples.csv', index=False)
+    df.to_csv('data/injecting_negative_examples.csv', index=False)
