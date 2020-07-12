@@ -81,7 +81,7 @@ def test_conditioning():
 
         prompt, response, original_reflection = test_inp
         output_df = output_df.append({
-                            'num_shots': num_shots,
+                            'num_shots': 2*num_shots,
                             'prompt': prompt,
                             'response': response,
                             'original_reflection': original_reflection,
@@ -91,11 +91,8 @@ def test_conditioning():
         print(output_df.head())
         break
         
-        
-        
-    
     return output_df
 
 if __name__ == "__main__":
     df = test_conditioning()
-    df.to_csv(index=False)
+    df.to_csv('injecting_negative_examples.csv', index=False)
