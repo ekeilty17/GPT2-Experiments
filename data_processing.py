@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 def get_paired_reviewed_data():
-    df = pd.read_csv("pair_reviewed_data.csv", index_col=0)
+    df = pd.read_csv("data/pair_reviewed_data.csv", index_col=0)
     
     data = {0: [], 1: []}
     for index, row in df.iterrows():
@@ -30,10 +30,12 @@ def reflection_definition():
     return  "Reflecting involves listening to the patient " + \
             "and then making statements not asking the patient questions\n"
 
-def convert_example_to_reflection_string(inp, label=None):
+def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp
 
     out  = f"Prompt: {prompt}\n"
     out += f"Response: {response}\n"
     out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
     return out
+
+
