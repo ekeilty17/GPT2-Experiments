@@ -6,6 +6,9 @@ import random
 from data_processing import *
 from gpt2 import *
 
+import argparse
+import pathlib
+
 SEED = 100
 random.seed(SEED)
 np.random.seed(SEED)
@@ -29,26 +32,12 @@ def test_parameters():
         print(output)
         print()
 
-def test_conditioning():
+def test_conditioning(model_tag, num_shots=3):
   
     df, data = get_paired_reviewed_data()
-    model, tokenizer, device = load_model()
-
-    num_shots = 3
-
+    model, tokenizer, device = load_model(model_tag)
 
     output_df = pd.DataFrame(columns=['num_shots', 'prompt', 'response', 'original_reflection', 'label', 'new_reflection'])
-    """
-    output_df = output_df.append({
-        'num_shots': num_shots,
-        'prompt': 'test prompt',
-        'response': 'test response',
-        'original_reflection': 'test original_reflection',
-        'label': 0,
-        'new_reflection': 'test new_reflection'
-    }, ignore_index=True)
-    print(output_df.head())
-    """
 
     for index, row in tqdm(df.iterrows()):
         test_inp = ( str(row["prompt"]), str(row["response"]), str(row["reflection_gpt"]) )
@@ -69,15 +58,9 @@ def test_conditioning():
         primers = [convert_example_to_formatted_string(inp, label) for inp, label in examples]
         test_str = convert_example_to_formatted_string(test_inp)
         gpt2_input = '\n\n'.join(primers + [test_str])
-        print(gpt2_input)
 
         output = get_gpt2_output(model, tokenizer, device, gpt2_input)
-        print()
-        print(output)
-
         new_reflection = get_reflection_from_gpt2_output(output)
-        print()
-        print(new_reflection)
 
         prompt, response, original_reflection = test_inp
         output_df = output_df.append({
@@ -88,11 +71,19 @@ def test_conditioning():
                             'label': test_label,
                             'new_reflection': new_reflection
                         }, ignore_index=True)
-        print(output_df.head())
-        break
         
     return output_df
 
 if __name__ == "__main__":
-    df = test_conditioning()
+    
+
+    # parse command line arguments
+    parser = argparse.ArgumentParser(description='Testing Simple Reflection Generation')
+    parser.add_argument('-model', type=str, default='gpt2',
+                        help="Model tag")
+    parser.add_argument('-num_shots', type=int, default=3,
+                        help="Number of examples the model will be conditioned with")
+    args = parser.parse_args()
+    
+    df = test_conditioning(args.model, args.num_shots)
     df.to_csv('injecting_negative_examples.csv', index=False)
