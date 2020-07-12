@@ -1,0 +1,46 @@
+from transformers import AutoTokenizer, AutoModelWithLMHead
+import torch
+
+# model_tag = "gpt2-xl" for best model, but it's 6GB
+def load_model(model_tag="gpt2"):
+    tokenizer = AutoTokenizer.from_pretrained(model_tag)
+    model = AutoModelWithLMHead.from_pretrained(model_tag)
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  
+    model = model.to(device)
+
+    return model, tokenizer, device
+
+def get_gpt2_output(model, tokenizer, device, text, 
+                    temperature=0.175, repetition_penalty=1.3, top_k=100, top_p=0.8, max_len=200, seed=None):
+    tokenized_text = tokenizer.encode(text, return_tensors="pt")
+    tokenized_text = tokenized_text.to(device)
+    summary_ids = model.generate(   tokenized_text,
+                                    seed=seed,
+                                    max_length=tokenized_text.shape[1] + max_len,
+                                    temperature=temperature,
+                                    repetition_penalty=repetition_penalty,
+                                    bos_token_id=tokenizer.bos_token_id,
+                                    pad_token_id=tokenizer.eos_token_id,
+                                    early_stopping=True,
+                                    top_k=top_k,
+                                    top_p=top_p)
+
+    output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    return output
+
+if __name__ == "__main__":
+    import inspect
+
+    def get_default_args(func):
+        signature = inspect.signature(func)
+        return {
+            k: v.default
+            for k, v in signature.parameters.items()
+            if v.default is not inspect.Parameter.empty
+        }
+    
+    model, tokenizer, device = load_model()
+
+    source = inspect.getsource(model.generate)
+
+    print(source)
