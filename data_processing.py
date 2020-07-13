@@ -29,13 +29,10 @@ def get_n_examples(data, n):
 def reflection_definition():
     # source:
     # https://miforquitting.wordpress.com/reflections/#:~:text=Reflecting%20in%20motivational%20Interviewing%20(MI,questions%20(Rosengren%2C%202009).&text=Reflections%20also%20go%20beyond%20parroting,to%20get%20to%20deeper%20meaning.
-    return  "Reflections are defined as statements of understanding. " + \
-            "Reflecting involves listening to the patient " + \
-            "and then making statements not asking the patient questions." + \
-            "Utilizing reflections and reflective listening involves " + \
-            "the practitioner listening to the patient’s statements " + \
-            "and the provider then making a statement that is a reasonable guess " + \
-            "at the meaning of what the client has said."
+    return  "Reflection is defined as a statement of understanding. " + \
+            "Reflecting involves listening to the Prompt and Response " + \
+            "and then making a statement that is a reasonable guess " + \
+            "at the meaning of what has been said."
  
 def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp

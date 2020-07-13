@@ -66,12 +66,13 @@ def test_conditioning(model_tag, num_shots=3):
             test_str = convert_example_to_formatted_string(test_inp)
             gpt2_input = '\n\n'.join([reflection_definition()] + primers + [test_str])
 
-            print(gpt2_input)
-
             output = get_gpt2_output(model, tokenizer, device, gpt2_input)
             new_reflection = get_reflection_from_gpt2_output(output)
 
-            print(new_reflection)
+            if index % 10 == 0:
+                print()
+                print(output)
+                print()
 
             prompt, response, original_reflection = test_inp
             output_df = output_df.append({
