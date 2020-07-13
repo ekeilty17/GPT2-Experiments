@@ -29,17 +29,16 @@ def get_n_examples(data, n):
 def reflection_definition():
     # source:
     # https://miforquitting.wordpress.com/reflections/#:~:text=Reflecting%20in%20motivational%20Interviewing%20(MI,questions%20(Rosengren%2C%202009).&text=Reflections%20also%20go%20beyond%20parroting,to%20get%20to%20deeper%20meaning.
-    return  "Task: Listening to the Prompt and Response " + \
-            "and then making a short statement that is a reasonable guess " + \
-            "at the meaning of what has been said."
+    return  "Make a short reflective statement based on the Prompt and Response " + \
+            "that is a reasonable guess at the meaning of what has been said:" 
  
 def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp
 
-    out  = f"Prompt: {prompt}\n"
-    out += f"Response: {response}\n"
+    out  = f"Prompt => {prompt}\n"
+    out += f"Response => {response}\n"
     #out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
-    out += f"Reflection: {'' if label is None else reflection}"
+    out += f"Reflection => {'' if label is None else reflection}"
     return out
 
 
