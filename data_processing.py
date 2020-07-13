@@ -27,15 +27,23 @@ def get_n_examples(data, n):
     return [(inp, 0) for inp in negative_examples] + [(inp, 1) for inp in positive_examples]
 
 def reflection_definition():
-    return  "Reflecting involves listening to the patient " + \
-            "and then making statements not asking the patient questions\n"
-
+    # source:
+    # https://miforquitting.wordpress.com/reflections/#:~:text=Reflecting%20in%20motivational%20Interviewing%20(MI,questions%20(Rosengren%2C%202009).&text=Reflections%20also%20go%20beyond%20parroting,to%20get%20to%20deeper%20meaning.
+    return  "Reflections are defined as statements of understanding. " + \
+            "Reflecting involves listening to the patient " + \
+            "and then making statements not asking the patient questions." + \
+            "Utilizing reflections and reflective listening involves " + \
+            "the practitioner listening to the patient’s statements " + \
+            "and the provider then making a statement that is a reasonable guess " + \
+            "at the meaning of what the client has said."
+ 
 def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp
 
     out  = f"Prompt: {prompt}\n"
     out += f"Response: {response}\n"
-    out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
+    #out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
+    out += f"Reflection: {'' if label is None else reflection}"
     return out
 
 
