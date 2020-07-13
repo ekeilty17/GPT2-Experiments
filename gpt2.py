@@ -28,10 +28,8 @@ def get_gpt2_output(model, tokenizer, device, text,
     output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return output
 
-def get_reflection_from_gpt2_output(text):
-    lines = text.split('\n\n')
-    target = lines[-1]
-    return target.split("Reflection: ")[-1]
+def get_reflection_from_gpt2_output(gpt2_input, gpt2_output):
+    return gpt2_output[len(gpt2_input):]
 
 if __name__ == "__main__":
     from data_processing import *
