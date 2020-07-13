@@ -31,7 +31,7 @@ def reflection_definition():
     # https://miforquitting.wordpress.com/reflections/#:~:text=Reflecting%20in%20motivational%20Interviewing%20(MI,questions%20(Rosengren%2C%202009).&text=Reflections%20also%20go%20beyond%20parroting,to%20get%20to%20deeper%20meaning.
     return  "Reflection is defined as a statement of understanding. " + \
             "Reflecting involves listening to the Prompt and Response " + \
-            "and then making a statement that is a reasonable guess " + \
+            "and then making a short statement that is a reasonable guess " + \
             "at the meaning of what has been said."
  
 def convert_example_to_formatted_string(inp, label=None):
