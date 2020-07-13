@@ -41,9 +41,6 @@ def test_conditioning(model_tag, num_shots=3):
 
     try:
         for index, row in tqdm(df.iterrows()):
-            
-            if index > 1:
-                x = int("hi")
 
             test_inp = ( str(row["prompt"]), str(row["response"]), str(row["reflection_gpt"]) )
             test_label = int(row["gpt_valid_reflection"])
@@ -76,7 +73,10 @@ def test_conditioning(model_tag, num_shots=3):
                                 'new_reflection': new_reflection
                             }, ignore_index=True)
             
-    except Exception as e:
+    except (KeyboardInterrupt, SystemExit):
+        # This way the code will still save the data if an interrupt occurs
+        pass
+    except Exception as e:    
         print(e)
     
     return output_df
@@ -92,8 +92,8 @@ if __name__ == "__main__":
                         help="Number of examples the model will be conditioned with")
     args = parser.parse_args()
     
-    print("begin testing")
+    print("Begin Testing...")
     df = test_conditioning(args.model, args.num_shots)
 
-    print("saving to csv")
+    print("Saving to csv...")
     df.to_csv('data/injecting_negative_examples.csv', index=False)

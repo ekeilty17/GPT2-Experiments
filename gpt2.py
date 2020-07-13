@@ -29,11 +29,22 @@ def get_gpt2_output(model, tokenizer, device, text,
     return output
 
 def get_reflection_from_gpt2_output(text):
-    lines = text.split('\n')
-    reflection_line = lines[-1] if lines[-1] != '\n' else lines[-2]
-    return reflection_line[len("Good Reflection: "):]
+    lines = text.split('\n\n')
+    target = lines[-1]
+    return target.split("Reflection: ")[-1]
 
 if __name__ == "__main__":
+    from data_processing import *
+
+    df, data = get_paired_reviewed_data()
+    examples = get_n_examples(data, 4)
+    
+    primers = [convert_example_to_formatted_string(inp, label) for inp, label in examples]
+    text = '\n\n'.join(primers)
+   
+    output = get_reflection_from_gpt2_output(text)
+    
+    """
     import inspect
 
     def get_default_args(func):
@@ -49,3 +60,4 @@ if __name__ == "__main__":
     source = inspect.getsource(model.generate)
 
     print(source)
+    """
