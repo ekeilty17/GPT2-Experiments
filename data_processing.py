@@ -35,5 +35,5 @@ def convert_example_to_formatted_string(inp, label=None):
     out  = f"Prompt => {prompt}\n"
     out += f"Response => {response}\n"
     #out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
-    out += f"Reflection => {'' if label is None else reflection}"
+    out += f"Summarization => {'' if label is None else reflection}"
     return out

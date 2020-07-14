@@ -64,7 +64,8 @@ def test_conditioning(model_tag, num_shots=3):
             # create final gpt2 input
             primers = [convert_example_to_formatted_string(inp, label) for inp, label in examples]
             test_str = convert_example_to_formatted_string(test_inp)
-            gpt2_input = '\n\n'.join([reflection_definition()] + primers + [test_str])
+            #gpt2_input = '\n\n'.join([reflection_definition()] + primers + [test_str])
+            gpt2_input = '\n\n'.join(primers + [test_str])
 
             output = get_gpt2_output(model, tokenizer, device, gpt2_input)
             new_reflection = get_reflection_from_gpt2_output(gpt2_input, output)
