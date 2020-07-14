@@ -32,8 +32,8 @@ def reflection_definition():
 def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp
 
-    out  = f"Prompt => {prompt}\n"
-    out += f"Response => {response}\n"
+    out  = f"Interviewer => {prompt}\n"
+    out += f"Client => {response}\n"
     #out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
     out += f"Summarization => {'' if label is None else reflection}"
     return out
