@@ -27,7 +27,7 @@ def get_n_examples(data, n):
     return [(inp, 0) for inp in negative_examples] + [(inp, 1) for inp in positive_examples]
 
 def reflection_definition():
-    return  "Make a short statement that reflections the meaning of Response given the Prompt:"
+    return  "Make a short statement that reflects the meaning of the Client:"
  
 def convert_example_to_formatted_string(inp, label=None):
     prompt, response, reflection = inp
