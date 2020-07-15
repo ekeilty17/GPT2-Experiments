@@ -95,6 +95,60 @@ def test_conditioning(model_tag, num_shots=3):
     
     return output_df
 
+
+def input_modification_test():
+
+    ex1 = {
+        "prompt": "Please describe a time where you contemplated the consequences of smoking on your health and then did not smoke that time",
+        "response": "I went hiking and wanted to be able to climb the mountain with my kids and so I did not smoke",
+        "reflection": "Your decision to stop smoking helped you feel better about yourself, which in turn led to more enjoyment of life."
+    }
+
+    ex2 = {
+        "prompt": "From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking",
+        "response": "When a friend was diagnosed with COPD. Thought about my own health",
+        "reflection": "You were concerned for your friends' health."
+    }
+
+    ex3 = {
+        "prompt": "Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?",
+        "response": "Will power and nicotine  replacement chewing gum.",
+        "reflection": "You used your willpower to stop smoking, but you still felt bad about it afterwards."
+    }
+
+    ex4 = {
+        "prompt": "Thank you for confirming my understanding I see, you may smoke because you feel stressed Do you have more positive things about smoking? Tell me if you can think of any",
+        "response": "It also lets me feel less awkward in some situations",
+        "reflection": "You felt less awkward when you smoked. "
+    }
+
+    test_ex = {
+        "prompt": "Okay, so you associate Smell as something negative about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking",
+        "response": "My stepdad hates the smell of cigarettes so I do my best to try to avoid smelling like smoke even though I am a smoker. Mainly out of respect and understanding that it's not the best smell in the world.",
+        "reflection": ""
+    }
+
+    examples = [ex1, ex2, ex3, ex4]
+
+    model, tokenizer, device = load_model(model_tag)
+
+    for statement_delimeter, example_delimeter in zip(['\n', ' | '], ['\n\n', '\n']):
+        
+        primers = [convert_example_to_formatted_string(ex.values(), 1, delimiter=statement_delimeter) for ex in examples]
+        test_str = convert_example_to_formatted_string(test_ex.values(), 1, delimiter=statement_delimeter)
+        
+        gpt2_input = example_delimeter.join(primers + [test_str])
+        gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
+        print(gpt2_output)
+        
+        print('\n' + '-'*20 + '\n')
+
+        gpt2_input = reflection_definition() + '\n' + gpt2_input
+        gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
+        print(gpt2_output)
+
+        print('\n' + '-'*20 + '\n')
+
 if __name__ == "__main__":
     
 
@@ -106,8 +160,12 @@ if __name__ == "__main__":
                         help="Number of examples the model will be conditioned with")
     args = parser.parse_args()
     
+    input_modification_test()
+
+    """
     print("Begin Testing...")
     df = test_conditioning(args.model, args.num_shots)
 
     print("Saving to csv...")
     df.to_csv('data/short_definition.csv', index=False)
+    """

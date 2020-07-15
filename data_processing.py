@@ -27,13 +27,13 @@ def get_n_examples(data, n):
     return [(inp, 0) for inp in negative_examples] + [(inp, 1) for inp in positive_examples]
 
 def reflection_definition():
-    return  "Make a short statement that reflects the meaning of the Client:"
+    return  "Make a short statement about smoking that reflects the meaning of the Client:"
  
-def convert_example_to_formatted_string(inp, label=None):
+def convert_example_to_formatted_string(inp, label=None, delimiter='\n'):
     prompt, response, reflection = inp
 
-    out  = f"Interviewer => {prompt}\n"
-    out += f"Client => {response}\n"
+    out  = f"Interviewer => {prompt}{delimiter}"
+    out += f"Client => {response}{delimiter}"
     #out += f"{'Bad' if label == 0 else 'Good'} Reflection: {'' if label is None else reflection}"
     out += f"Summarization => {'' if label is None else reflection}"
     return out
