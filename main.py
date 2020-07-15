@@ -96,7 +96,7 @@ def test_conditioning(model_tag, num_shots=3):
     return output_df
 
 
-def input_modification_test():
+def input_modification_test(model_tag):
 
     ex1 = {
         "prompt": "Please describe a time where you contemplated the consequences of smoking on your health and then did not smoke that time",
