@@ -136,14 +136,18 @@ def input_modification_test(model_tag):
         
         primers = [convert_example_to_formatted_string(ex.values(), 1, delimiter=statement_delimeter) for ex in examples]
         test_str = convert_example_to_formatted_string(test_ex.values(), 1, delimiter=statement_delimeter)
-        
+
         gpt2_input = example_delimeter.join(primers + [test_str])
         gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
         print(gpt2_output)
-        
         print('\n' + '-'*20 + '\n')
+    
+    for statement_delimeter, example_delimeter in zip(['\n', ' | '], ['\n\n', '\n']):
+        
+        primers = [reflection_definition() + '\n' + convert_example_to_formatted_string(ex.values(), 1, delimiter=statement_delimeter) for ex in examples]
+        test_str = reflection_definition() + '\n' + convert_example_to_formatted_string(test_ex.values(), 1, delimiter=statement_delimeter)
 
-        gpt2_input = reflection_definition() + '\n' + gpt2_input
+        gpt2_input = example_delimeter.join(primers + [test_str])
         gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
         print(gpt2_output)
 
@@ -160,7 +164,7 @@ if __name__ == "__main__":
                         help="Number of examples the model will be conditioned with")
     args = parser.parse_args()
     
-    input_modification_test()
+    input_modification_test(args.model)
 
     """
     print("Begin Testing...")
