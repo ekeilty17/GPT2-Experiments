@@ -68,7 +68,7 @@ def test_conditioning(model_tag, num_shots=3):
             gpt2_input = '\n\n'.join(primers + [test_str])
 
             output = get_gpt2_output(model, tokenizer, device, gpt2_input)
-            new_reflection = get_reflection_from_gpt2_output(gpt2_input, output)
+            new_reflection = get_gpt2_generated_output(gpt2_input, output)
 
             if index % 10 == 0:
                 print()

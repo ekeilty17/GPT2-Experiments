@@ -20,7 +20,7 @@ def get_gpt2_output(model, tokenizer, device, text,
                                     temperature=temperature,
                                     repetition_penalty=repetition_penalty,
                                     bos_token_id=tokenizer.bos_token_id,
-                                    pad_token_id=tokenizer.eos_token_id,
+                                    #pad_token_id=tokenizer.eos_token_id,
                                     early_stopping=True,
                                     top_k=top_k,
                                     top_p=top_p)
@@ -28,7 +28,7 @@ def get_gpt2_output(model, tokenizer, device, text,
     output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return output
 
-def get_reflection_from_gpt2_output(gpt2_input, gpt2_output):
+def get_gpt2_generated_output(gpt2_input, gpt2_output):
     return gpt2_output[len(gpt2_input):]
 
 if __name__ == "__main__":
