@@ -4,6 +4,7 @@ from tqdm import tqdm
 import random
 
 from data_processing import *
+from cleaning import clean_reflection
 from gpt2 import *
 
 import argparse
@@ -12,7 +13,8 @@ import pathlib
 SEED = 100
 random.seed(SEED)
 np.random.seed(SEED)
-torch.manual_seed(SEED)
+if not SEED is None:
+    torch.manual_seed(SEED)
 
 def test_parameters():
 
@@ -163,7 +165,7 @@ def experiments(model_name):
     # preparing data
     df, primers = get_reflection_data()
     header_row = pd.DataFrame({
-            'prompt': "This first row contains information about the data", 
+            'prompt': "This first row contains information about the data. SEED = " + SEED, 
             'response': "Reflection Definition: " + reflection_definition()
         }, index=[0]) 
     df = pd.concat([header_row, df]).reset_index(drop=True) 
@@ -194,8 +196,8 @@ def experiments(model_name):
             gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
             new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
 
+            new_reflection = clean_reflection(new_reflection)
             new_reflection_data.append( [new_reflection] + list(sample_hyperparameters().values()) )
-            break
 
     except (KeyboardInterrupt, SystemExit):
         # This way the code will still save the data if an interrupt occurs
