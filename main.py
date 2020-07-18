@@ -165,7 +165,7 @@ def experiments(model_name):
     # preparing data
     df, primers = get_reflection_data()
     header_row = pd.DataFrame({
-            'prompt': "This first row contains information about the data. SEED = " + SEED, 
+            'prompt': f"This first row contains information about the data. SEED = {'None' if SEED is None else SEED}", 
             'response': "Reflection Definition: " + reflection_definition()
         }, index=[0]) 
     df = pd.concat([header_row, df]).reset_index(drop=True) 
@@ -196,8 +196,15 @@ def experiments(model_name):
             gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
             new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
 
+            if index % 5 == 0:
+                print()
+                print(gpt2_output)
+                print()
+                print(hyperparameters)
+                print()
+
             new_reflection = clean_reflection(new_reflection)
-            new_reflection_data.append( [new_reflection] + list(sample_hyperparameters().values()) )
+            new_reflection_data.append( [new_reflection] + list(hyperparameters.values()) )
 
     except (KeyboardInterrupt, SystemExit):
         # This way the code will still save the data if an interrupt occurs
