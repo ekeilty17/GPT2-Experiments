@@ -170,7 +170,7 @@ def experiments(model_name):
         }, index=[0]) 
     df = pd.concat([header_row, df]).reset_index(drop=True) 
     
-    new_column_name = "generated_reflections_1"
+    new_column_name = f"generated_reflections_{len(df.columns)-1}"
     #                                    ['num_shots', 'top_k', 'top_p', 'repetition_penalty', 'definition']
     new_column_header = ["reflection"] + list(sample_hyperparameters().keys())
     new_reflection_data = []
@@ -178,7 +178,10 @@ def experiments(model_name):
     try:
 
         for index, row in tqdm(df.iterrows()):
-            
+            # the first row is a header row with information
+            if index == 0:
+                continue
+
             # randomly sampling hyperparameters
             hyperparameters = sample_hyperparameters()
 
