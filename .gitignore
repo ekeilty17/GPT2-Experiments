@@ -130,3 +130,6 @@ dmypy.json
 
 # data file
 data/injecting_negative_examples.csv
+
+# Mac file
+.DS_Store

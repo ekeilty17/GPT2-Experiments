@@ -1,10 +1,12 @@
 from transformers import AutoTokenizer, AutoModelWithLMHead
 import torch
 
-# model_tag = "gpt2-xl" for best model, but it's 6GB
-def load_model(model_tag="gpt2"):
-    tokenizer = AutoTokenizer.from_pretrained(model_tag)
-    model = AutoModelWithLMHead.from_pretrained(model_tag)
+# model_name = "gpt2-xl" for best model, but it's 6GB
+def load_model(model_name="gpt2"):
+    print("Loading Tokenizer...")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    print("Loading model...")
+    model = AutoModelWithLMHead.from_pretrained(model_name)
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  
     model = model.to(device)
 
@@ -20,7 +22,7 @@ def get_gpt2_output(model, tokenizer, device, text,
                                     temperature=temperature,
                                     repetition_penalty=repetition_penalty,
                                     bos_token_id=tokenizer.bos_token_id,
-                                    #pad_token_id=tokenizer.eos_token_id,
+                                    pad_token_id=tokenizer.eos_token_id,
                                     early_stopping=True,
                                     top_k=top_k,
                                     top_p=top_p)

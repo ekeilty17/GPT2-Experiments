@@ -32,10 +32,10 @@ def test_parameters():
         print(output)
         print()
 
-def test_conditioning(model_tag, num_shots=3):
+def test_conditioning(model_name, num_shots=3):
   
     df, data = get_paired_reviewed_data()
-    model, tokenizer, device = load_model(model_tag)
+    model, tokenizer, device = load_model(model_name)
 
     output_df = pd.DataFrame(columns=['num_shots', 'prompt', 'response', 'original_reflection', 'label', 'new_reflection'])
 
@@ -96,7 +96,7 @@ def test_conditioning(model_tag, num_shots=3):
     return output_df
 
 
-def input_modification_test(model_tag):
+def input_modification_test(model_name):
 
     ex1 = {
         "prompt": "Please describe a time where you contemplated the consequences of smoking on your health and then did not smoke that time",
@@ -116,26 +116,28 @@ def input_modification_test(model_tag):
         "reflection": "You used your willpower to stop smoking, but you still felt bad about it afterwards."
     }
 
-    ex4 = {
+    test_ex = {
         "prompt": "Thank you for confirming my understanding I see, you may smoke because you feel stressed Do you have more positive things about smoking? Tell me if you can think of any",
         "response": "It also lets me feel less awkward in some situations",
         "reflection": "You felt less awkward when you smoked. "
     }
 
+    """
     test_ex = {
         "prompt": "Okay, so you associate Smell as something negative about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking",
         "response": "My stepdad hates the smell of cigarettes so I do my best to try to avoid smelling like smoke even though I am a smoker. Mainly out of respect and understanding that it's not the best smell in the world.",
         "reflection": ""
     }
+    """
 
     examples = [ex1, ex2, ex3, ex4]
 
-    model, tokenizer, device = load_model(model_tag)
+    model, tokenizer, device = load_model(model_name)
 
     for statement_delimeter, example_delimeter in zip(['\n', ' | '], ['\n\n', '\n']):
         
-        primers = [convert_example_to_formatted_string(ex.values(), 1, delimiter=statement_delimeter) for ex in examples]
-        test_str = convert_example_to_formatted_string(test_ex.values(), 1, delimiter=statement_delimeter)
+        primers = [convert_example_to_formatted_string(ex.values(), label=1, delimiter=statement_delimeter) for ex in examples]
+        test_str = convert_example_to_formatted_string(test_ex.values(), delimiter=statement_delimeter)
 
         gpt2_input = example_delimeter.join(primers + [test_str])
         gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
@@ -153,23 +155,70 @@ def input_modification_test(model_tag):
 
         print('\n' + '-'*20 + '\n')
 
+def experiments(model_name):
+
+    # loading model
+    model, tokenizer, device = load_model(model_name)
+
+    # preparing data
+    df, primers = get_reflection_data()
+    header_row = pd.DataFrame({
+            'prompt': "This first row contains information about the data", 
+            'response': "Reflection Definition: " + reflection_definition()
+        }, index=[0]) 
+    df = pd.concat([header_row, df]).reset_index(drop=True) 
+    
+    new_column_name = "generated_reflections_1"
+    #                                    ['num_shots', 'top_k', 'top_p', 'repetition_penalty', 'definition']
+    new_column_header = ["reflection"] + list(sample_hyperparameters().keys())
+    new_reflection_data = []
+
+    try:
+
+        for index, row in tqdm(df.iterrows()):
+            
+            # randomly sampling hyperparameters
+            hyperparameters = sample_hyperparameters()
+
+            # getting conditioning string
+            examples = primers.sample(n=hyperparameters["num_shots"])
+            examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
+                            for _, ex_row in examples.iterrows()]
+            test_str = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
+
+            if hyperparameters["definition"]:
+                examples = [reflection_definition() + '\n' + example for example in examples]
+                test_str = reflection_definition() + '\n' + test_str
+            
+            gpt2_input = "\n\n".join(examples + [test_str])
+            gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
+            new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
+
+            new_reflection_data.append( [new_reflection] + list(sample_hyperparameters().values()) )
+            break
+
+    except (KeyboardInterrupt, SystemExit):
+        # This way the code will still save the data if an interrupt occurs
+        pass
+    except Exception as e: 
+        print("ERROR")   
+        print(e)
+    
+    df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
+    return df
+
 if __name__ == "__main__":
     
-
     # parse command line arguments
     parser = argparse.ArgumentParser(description='Testing Simple Reflection Generation')
     parser.add_argument('-model', type=str, default='gpt2',
-                        help="Model tag")
+                        help="Model name")
     parser.add_argument('-num_shots', type=int, default=3,
                         help="Number of examples the model will be conditioned with")
     args = parser.parse_args()
-    
-    input_modification_test(args.model)
 
-    """
-    print("Begin Testing...")
-    df = test_conditioning(args.model, args.num_shots)
+    print("Begin Experiments...")
+    df = experiments(args.model)
 
     print("Saving to csv...")
-    df.to_csv('data/short_definition.csv', index=False)
-    """
+    df.to_csv('data/reflection_experiments.csv', index=True)
