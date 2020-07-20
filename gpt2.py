@@ -7,7 +7,7 @@ def load_model(model_name="gpt2"):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     print("Loading model...")
     model = AutoModelWithLMHead.from_pretrained(model_name)
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  
     model = model.to(device)
 
     return model, tokenizer, device
@@ -26,6 +26,8 @@ def get_gpt2_output(model, tokenizer, device, text,
                                     early_stopping=True,
                                     top_k=top_k,
                                     top_p=top_p)
+
+    print(summary_ids)
 
     output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return output

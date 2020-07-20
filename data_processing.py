@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
 
+class AttrDict(dict):
+    def __init__(self, *args, **kwargs):
+        super(AttrDict, self).__init__(*args, **kwargs)
+        self.__dict__ = self
+
 def get_paired_reviewed_data():
     df = pd.read_csv("data/pair_reviewed_data.csv", index_col=0)
     
@@ -15,6 +20,17 @@ def get_paired_reviewed_data():
             print("index", index, "threw an error")
     
     return df, data
+
+def get_paraphrase_data():
+    
+    print("Reading paraphrase corpus...")
+    train_file = './paraphrase_corpus/msr_paraphrase_train.txt'
+    test_file = './paraphrase_corpus/msr_paraphrase_test.txt'
+
+    train_df = pd.read_csv(train_file, sep='\t', encoding='utf-8', error_bad_lines=False)
+    test_df = pd.read_csv(test_file, sep='\t', encoding='utf-8', error_bad_lines=False)
+    
+    return train_df, test_df
 
 # create train/test split
 def train_test_split(df):
@@ -39,7 +55,7 @@ def get_reflection_data():
     df4 = df4[['prompt', 'response']]
     df5 = df5[['prompt', 'response']]
 
-    full_df = pd.concat([df2,df3,df4,df5] ,ignore_index=True)
+    full_df = pd.concat([df2,df3,df4,df5], ignore_index=True)
 
     return full_df, primers
 
