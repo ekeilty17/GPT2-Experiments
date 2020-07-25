@@ -187,7 +187,96 @@ def experiments(model_name, seed=None):
                 test_str = reflection_definition() + '\n' + test_str
             
             gpt2_input = "\n\n".join(examples + [test_str])
-            gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input)
+            gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
+            new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
+
+            if index % 5 == 0:
+                print()
+                print(gpt2_output)
+                print()
+                print(hyperparameters)
+                print()
+
+            new_reflection = clean_reflection(new_reflection)
+            new_reflection_data.append( [new_reflection] + list(hyperparameters.values()) )
+
+    except (KeyboardInterrupt, SystemExit):
+        # This way the code will still save the data if an interrupt occurs
+        pass
+    except Exception as e: 
+        print("ERROR")   
+        print(e)
+    
+    df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
+    return df
+
+def grid_search(model_name, seed=None):
+    
+    # hyperparameter ranges for the grid search
+    NUM_SHOTS = [5, 6, 7]
+    TOP_K = [100]
+    TOP_P = [0.5, 0.6, 0.7, 0.8]
+    REPETITION_PENALTY = [1.0, 1.1, 1.2, 1.3]
+    DEFINITION = [0]
+
+    # pre-processing the list of hyperparameter combinations just to make things easier
+    hyperparameter_list = []
+    for num_shots in NUM_SHOTS:
+        for top_k in TOP_K:
+            for top_p in TOP_P:
+                for repetition_penalty in REPETITION_PENALTY:
+                    for definition in DEFINITION:
+                        hyperparameter_list.append({
+                            "num_shots": num_shots,
+                            "top_k": top_k,
+                            "top_p": top_p,
+                            "repetition_penalty": repetition_penalty,
+                            "definition": definition
+                        })
+    
+    # loading model
+    model, tokenizer, device = load_model(model_name)
+
+    # preparing data
+    df, primers = get_reflection_data()
+    header_row = pd.DataFrame({
+            'prompt': f"This first row contains information about the data. SEED = {'None' if seed is None else seed}", 
+            'response': "Reflection Definition: " + reflection_definition()
+        }, index=[0]) 
+    df = pd.concat([header_row, df]).reset_index(drop=True) 
+    
+    new_column_name = f"generated_reflections_{len(df.columns)-1}"
+    #                                    ['num_shots', 'top_k', 'top_p', 'repetition_penalty', 'definition']
+    new_column_header = ["reflection"] + list(hyperparameter_list[0].keys())
+    new_reflection_data = []
+
+    try:
+        
+        # number of times we try each hyper-parameter
+        bin_size = 10
+
+        for index in tqdm(range(len(df))):
+            # the first row is a header row with information
+            if index == 0:
+                continue
+            
+            row = df.iloc[index]
+
+            h = int( (index - 1) // bin_size )
+            hyperparameters = hyperparameter_list[h]
+
+            # getting conditioning string
+            examples = primers.sample(n=hyperparameters["num_shots"])
+            examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
+                            for _, ex_row in examples.iterrows()]
+            test_str = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
+
+            if hyperparameters["definition"]:
+                examples = [reflection_definition() + '\n' + example for example in examples]
+                test_str = reflection_definition() + '\n' + test_str
+
+            gpt2_input = "\n\n".join(examples + [test_str])
+            gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
             new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
 
             if index % 5 == 0:

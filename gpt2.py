@@ -13,7 +13,8 @@ def load_model(model_name="gpt2"):
     return model, tokenizer, device
 
 def get_gpt2_output(model, tokenizer, device, text, 
-                    temperature=0.175, repetition_penalty=1.3, top_k=100, top_p=0.8, max_len=100, seed=None):
+                    temperature=0.175, repetition_penalty=1.3, top_k=100, top_p=0.8, max_len=100, seed=None,
+                    *args, **kwargs):
     tokenized_text = tokenizer.encode(text, return_tensors="pt")
     tokenized_text = tokenized_text.to(device)
     summary_ids = model.generate(   tokenized_text,
@@ -26,8 +27,6 @@ def get_gpt2_output(model, tokenizer, device, text,
                                     early_stopping=True,
                                     top_k=top_k,
                                     top_p=top_p)
-
-    print(summary_ids)
 
     output = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return output

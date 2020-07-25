@@ -21,7 +21,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print("Begin Experiments...")
-    df = experiments(args.model, SEED)
+    df = grid_search(args.model, SEED)
 
     print("Saving to csv...")
     df.to_csv('data/reflection_experiments.csv', index=True)
