@@ -1,4 +1,13 @@
-def test_parameters():
+import numpy as np
+import torch
+from tqdm import tqdm
+import random
+
+from data_processing import *
+from cleaning import clean_reflection
+from gpt2 import *
+
+def test_parameters(seed=None):
 
     examples = get_n_examples(data, 1)
     inp, label = examples[0]
@@ -10,7 +19,7 @@ def test_parameters():
         repetition_penalty = i/10
 
         output = get_gpt2_output(   model, tokenizer, device, text,
-                                    repetition_penalty=repetition_penalty, seed=SEED)
+                                    repetition_penalty=repetition_penalty, seed=seed)
         
         print(repetition_penalty)
         print(output)
@@ -139,7 +148,7 @@ def input_modification_test(model_name):
 
         print('\n' + '-'*20 + '\n')
 
-def experiments(model_name):
+def experiments(model_name, seed=None):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
@@ -147,7 +156,7 @@ def experiments(model_name):
     # preparing data
     df, primers = get_reflection_data()
     header_row = pd.DataFrame({
-            'prompt': f"This first row contains information about the data. SEED = {'None' if SEED is None else SEED}", 
+            'prompt': f"This first row contains information about the data. SEED = {'None' if seed is None else seed}", 
             'response': "Reflection Definition: " + reflection_definition()
         }, index=[0]) 
     df = pd.concat([header_row, df]).reset_index(drop=True) 

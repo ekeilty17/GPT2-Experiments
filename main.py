@@ -1,12 +1,3 @@
-import numpy as np
-import torch
-from tqdm import tqdm
-import random
-
-from data_processing import *
-from cleaning import clean_reflection
-from gpt2 import *
-
 from testing import *
 from training import *
 
@@ -29,14 +20,13 @@ if __name__ == "__main__":
                         help="Number of examples the model will be conditioned with")
     args = parser.parse_args()
 
-    """
     print("Begin Experiments...")
-    df = experiments(args.model)
+    df = experiments(args.model, SEED)
 
     print("Saving to csv...")
     df.to_csv('data/reflection_experiments.csv', index=True)
-    """
     
+    """
     paraphrase_opts = AttrDict()
     args_dict = {
         "seed": SEED,
@@ -55,3 +45,4 @@ if __name__ == "__main__":
     print("Begin Training...")
     model, train_loss = pytorch_train(model, tokenizer, device, training_loader, paraphrase_opts)
     torch.save(finetuned_model, "gpt2_finetune_paraphrase.pt")
+    """
