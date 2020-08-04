@@ -179,7 +179,8 @@ def experiments(model_name, seed=None):
 
             # getting conditioning string
             test_string = get_prompt_response_string(row)
-            examples = get_n_best_examples(test_string, primer_df, primer_embeddings, hyperparameters["num_shots"])
+            #examples = get_n_best_examples(test_string, primer_df, primer_embeddings, hyperparameters["num_shots"])
+            examples = primer_df.sample(n=hyperparameters["num_shots"])
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
                             for _, ex_row in examples.iterrows()]
             test_str = convert_example_to_formatted_string( (row["prompt"], row["response"]) )

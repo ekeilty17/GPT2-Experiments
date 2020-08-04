@@ -72,7 +72,9 @@ def get_reflection_data():
     full_df = remove_duplicates(primer_df, full_df)
     """
     
-    full_df = pd.read_csv('data/test_reflection_data.csv', index_col=0)
+    full_df = pd.read_csv('data/reflection_experiments.csv', index_col=0)
+    full_df = full_df[['prompt', 'response']]
+    full_df = full_df.drop(0)
 
     prompt_response_strings = []
     embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
