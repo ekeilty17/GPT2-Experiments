@@ -7,6 +7,7 @@ from data_processing import *
 from cleaning import clean_reflection
 from gpt2 import *
 
+
 def test_parameters(seed=None):
 
     examples = get_n_examples(data, 1)
@@ -154,7 +155,7 @@ def experiments(model_name, seed=None):
     model, tokenizer, device = load_model(model_name)
 
     # preparing data
-    df, primers = get_reflection_data()
+    df, primer_df, primer_embeddings = get_reflection_data()
     header_row = pd.DataFrame({
             'prompt': f"This first row contains information about the data. SEED = {'None' if seed is None else seed}", 
             'response': "Reflection Definition: " + reflection_definition()
@@ -177,7 +178,8 @@ def experiments(model_name, seed=None):
             hyperparameters = sample_hyperparameters()
 
             # getting conditioning string
-            examples = primers.sample(n=hyperparameters["num_shots"])
+            test_string = get_prompt_response_string(row)
+            examples = get_n_best_examples(test_string, primer_df, primer_embeddings, hyperparameters["num_shots"])
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
                             for _, ex_row in examples.iterrows()]
             test_str = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
@@ -209,6 +211,7 @@ def experiments(model_name, seed=None):
     
     df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
     return df
+
 
 def grid_search(model_name, seed=None):
     
@@ -298,3 +301,7 @@ def grid_search(model_name, seed=None):
     
     df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
     return df
+
+
+if __name__ == "__main__":
+    get_prime_examples(None, None)

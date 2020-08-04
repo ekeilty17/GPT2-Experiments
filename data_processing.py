@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import tensorflow as tf
+import tensorflow_hub as hub
 
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
@@ -40,6 +42,9 @@ def train_test_split(df):
     #print(f"training size: {len(train_df)} test size: {len(test_df)}")
     return train_df, test_df
 
+def get_prompt_response_string(row):
+    return row['prompt'] + '\n' + row['response']
+
 def get_reflection_data():
     
     print("Reading reflection collections data...")
@@ -49,15 +54,21 @@ def get_reflection_data():
     df4 = pd.read_csv('data/reflections_collections/verified_gpt_reflections.csv', index_col=0)
     df5 = pd.read_csv('data/reflections_collections/verified_gpt_reflections_3shot.csv', index_col=0)
 
-    primers = df1[['prompt', 'response', 'reflection_human']]
+    primer_df = df1[['prompt', 'response', 'reflection_human']]
     df2 = df2[['prompt', 'response']]
     df3 = df3[['prompt', 'response']]
     df4 = df4[['prompt', 'response']]
     df5 = df5[['prompt', 'response']]
 
-    full_df = pd.concat([df2,df3,df4,df5], ignore_index=True)
+    full_df = pd.concat([df2, df3, df4, df5], ignore_index=True)
+    
+    prompt_response_strings = []
+    embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+    for index, row in primer_df.iterrows():
+        prompt_response_strings.append( get_prompt_response_string(row) )
+    primer_embeddings = embed(prompt_response_strings)
 
-    return full_df, primers
+    return full_df, primer_df, primer_embeddings
 
 # here n = number of positive and negative examples
 # so the total number of conditioned examples will be 2n (to keep things balanced)
@@ -68,6 +79,20 @@ def get_n_examples(data, n):
     positive_examples = [data[1][i] for i in np.random.choice(np.arange(len(data[1])), n)]
 
     return [(inp, 0) for inp in negative_examples] + [(inp, 1) for inp in positive_examples]
+
+def get_n_best_examples(string, primer_df, primer_embeddings, n):
+    
+    embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+    
+    string_embedding = embed([string])[0]
+
+    similarities = []
+    for (index, _), primer_embedding in zip(primer_df.iterrows(), primer_embeddings):
+        similarity = consine_similarity(string_embedding, primer_embedding)
+        similarities.append( (index, float(similarity)) )
+    
+    similarities = list(sorted(similarities, key=lambda t: t[1]))
+    return primer_df.iloc[ [index for index, _ in similarities[:n]] ]
 
 def reflection_definition():
     return  "Make a short statement about smoking that reflects the meaning of the Client:"
@@ -91,11 +116,18 @@ def add_column_to_dataframe(df, data, column_name):
     return df
 
 def sample_hyperparameters():
+    """
     num_shots = [4, 5, 6]
     top_k = [0, 10, 50, 100]
     top_p = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
     repetition_penalty = [1.0, 1.25, 1.5, 1.75, 2.0]
     definition = [0, 1]
+    """
+    num_shots = [6]
+    top_k = [100]
+    top_p = [0.6]
+    repetition_penalty = [1.0]
+    definition = [0]
 
     return {
         "num_shots": np.random.choice(num_shots),
@@ -105,13 +137,34 @@ def sample_hyperparameters():
         "definition": np.random.choice(definition)
     }
 
+def consine_similarity(t1, t2, axis=-1):
+    return tf.keras.losses.cosine_similarity(t1, t2, axis=axis)
+
 if __name__ == "__main__":
 
     #hyperparameters = sample_hyperparameters()
     #print(list(hyperparameters.values()))
 
 
-    df, primers = get_reflection_data()
+    df, primer_df, primer_embeddings = get_reflection_data()
+    
+    test_row = primer_df.iloc[0]
+    test_string = get_prompt_response_string(test_row)
+    
+    print(0)
+    print(test_string)
+    print()
+
+    num_shot = 6
+    examples_df = get_n_best_examples(test_string, primer_df, primer_embeddings, num_shot)
+
+    for index, row in examples_df.iterrows():
+        ex_string = get_prompt_response_string(row)
+        print(index)
+        print(ex_string)
+        print()
+
+    """
     print(len(df))
     print(primers)
 
@@ -124,3 +177,4 @@ if __name__ == "__main__":
 
     #df = add_column_to_dataframe(df, [["test1", "test2"], ["test3", "test4"]], "test")
     #print(df.head())
+    """
