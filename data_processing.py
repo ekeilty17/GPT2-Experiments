@@ -3,6 +3,11 @@ import numpy as np
 import tensorflow as tf
 import tensorflow_hub as hub
 
+import logging
+tf.get_logger().setLevel(logging.ERROR)
+
+from cleaning import remove_duplicates
+
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
         super(AttrDict, self).__init__(*args, **kwargs)
@@ -48,20 +53,27 @@ def get_prompt_response_string(row):
 def get_reflection_data():
     
     print("Reading reflection collections data...")
-    df1 = pd.read_csv('data/reflections_collections/annotated_manual_primer_responses.csv', index_col=0)
-    df2 = pd.read_csv('data/reflections_collections/full_median_length_primers.csv', index_col=0)
-    df3 = pd.read_csv('data/reflections_collections/numshot_analysis_sample_coded.csv', index_col=0)
-    df4 = pd.read_csv('data/reflections_collections/verified_gpt_reflections.csv', index_col=0)
-    df5 = pd.read_csv('data/reflections_collections/verified_gpt_reflections_3shot.csv', index_col=0)
+    
+    primer_df = pd.read_csv('data/reflections_collections/annotated_manual_primer_responses.csv', index_col=0)
+    primer_df = primer_df[['prompt', 'response', 'reflection_human']]
+    primer_df = remove_duplicates(pd.DataFrame(columns=['prompt', 'response']), primer_df)
 
-    primer_df = df1[['prompt', 'response', 'reflection_human']]
+    """
+    df1 = pd.read_csv('data/reflections_collections/full_median_length_primers.csv', index_col=0)
+    df2 = pd.read_csv('data/reflections_collections/numshot_analysis_sample_coded.csv', index_col=0)
+    df3 = pd.read_csv('data/reflections_collections/verified_gpt_reflections.csv', index_col=0)
+    df4 = pd.read_csv('data/reflections_collections/verified_gpt_reflections_3shot.csv', index_col=0)
+    df1 = df1[['prompt', 'response']]
     df2 = df2[['prompt', 'response']]
     df3 = df3[['prompt', 'response']]
     df4 = df4[['prompt', 'response']]
-    df5 = df5[['prompt', 'response']]
 
-    full_df = pd.concat([df2, df3, df4, df5], ignore_index=True)
+    full_df = pd.concat([df1, df2, df3, df4], ignore_index=True)
+    full_df = remove_duplicates(primer_df, full_df)
+    """
     
+    full_df = pd.read_csv('data/test_reflection_data.csv', index_col=0)
+
     prompt_response_strings = []
     embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
     for index, row in primer_df.iterrows():
@@ -145,7 +157,9 @@ if __name__ == "__main__":
     #hyperparameters = sample_hyperparameters()
     #print(list(hyperparameters.values()))
 
+    get_reflection_data()
 
+    """
     df, primer_df, primer_embeddings = get_reflection_data()
     
     test_row = primer_df.iloc[0]
@@ -163,6 +177,7 @@ if __name__ == "__main__":
         print(index)
         print(ex_string)
         print()
+    """
 
     """
     print(len(df))

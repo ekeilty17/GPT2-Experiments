@@ -192,7 +192,7 @@ def experiments(model_name, seed=None):
             gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
             new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
 
-            if index % 5 == 0:
+            if index % 2 == 0:
                 print()
                 print(gpt2_output)
                 print()
@@ -282,7 +282,7 @@ def grid_search(model_name, seed=None):
             gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
             new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
 
-            if index % 5 == 0:
+            if index % 2 == 0:
                 print()
                 print(gpt2_output)
                 print()
