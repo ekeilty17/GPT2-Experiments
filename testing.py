@@ -165,7 +165,18 @@ def experiments(model_name, seed=None):
     new_column_name = f"generated_reflections_{len(df.columns)-1}"
     #                                    ['num_shots', 'top_k', 'top_p', 'repetition_penalty', 'definition']
     new_column_header = ["reflection"] + list(sample_hyperparameters().keys())
-    new_reflection_data = []
+    
+    permutations = [
+                [0, 1, 2, 5, 4, 3],
+                [0, 1, 2, 3, 5, 4],
+                [1, 2, 0, 3, 4, 5],
+                [2, 0, 1, 3, 4, 5],
+                [5, 4, 3, 2, 1, 0],
+                [3, 0, 5, 1, 4, 2]
+            ]
+        
+    #new_reflection_data = []
+    new_reflection_data = { f"perm_{''.join(map(str, perm))}": [] for perm in permutations }
 
     try:
 
@@ -179,8 +190,9 @@ def experiments(model_name, seed=None):
 
             # getting conditioning string
             test_string = get_prompt_response_string(row)
-            #examples = get_n_best_examples(test_string, primer_df, primer_embeddings, hyperparameters["num_shots"])
-            examples = primer_df.sample(n=hyperparameters["num_shots"])
+            examples = get_n_best_examples(test_string, primer_df, primer_embeddings, hyperparameters["num_shots"])
+            #examples = primer_df.sample(n=hyperparameters["num_shots"])
+            
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
                             for _, ex_row in examples.iterrows()]
             test_str = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
@@ -188,20 +200,31 @@ def experiments(model_name, seed=None):
             if hyperparameters["definition"]:
                 examples = [reflection_definition() + '\n' + example for example in examples]
                 test_str = reflection_definition() + '\n' + test_str
+
+            reflection_set = []
+            for perm in permutations:
+                examples_permuted = [examples[p] for p in perm]
             
-            gpt2_input = "\n\n".join(examples + [test_str])
-            gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
-            new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
+                gpt2_input = "\n\n".join(examples_permuted + [test_str])
+                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
+                new_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
+                
+                new_reflection = clean_reflection(new_reflection)
+                reflection_set.append(new_reflection)
 
-            if index % 2 == 0:
+            if index % 1 == 0:
                 print()
-                print(gpt2_output)
+                #print(gpt2_output)
+                print(test_str)
                 print()
-                print(hyperparameters)
+                #print(hyperparameters)
+                for reflection in reflection_set:
+                    print(reflection)
                 print()
 
-            new_reflection = clean_reflection(new_reflection)
             new_reflection_data.append( [new_reflection] + list(hyperparameters.values()) )
+            for reflection, perm in zip(reflection_set, permutations):
+                new_reflection_data[f"perm_{''.join(map(str, perm))}"].append(reflection)
 
     except (KeyboardInterrupt, SystemExit):
         # This way the code will still save the data if an interrupt occurs
@@ -210,7 +233,9 @@ def experiments(model_name, seed=None):
         print("ERROR")   
         print(e)
     
-    df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
+    for key, val in new_reflection_data.items():
+        df = add_column_to_dataframe(df, [''] + val, key)
+
     return df
 
 
