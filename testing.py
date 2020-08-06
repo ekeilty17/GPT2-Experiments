@@ -222,7 +222,7 @@ def experiments(model_name, seed=None):
                     print(reflection)
                 print()
 
-            new_reflection_data.append( [new_reflection] + list(hyperparameters.values()) )
+            #new_reflection_data.append( [new_reflection] + list(hyperparameters.values()) )
             for reflection, perm in zip(reflection_set, permutations):
                 new_reflection_data[f"perm_{''.join(map(str, perm))}"].append(reflection)
 
@@ -233,6 +233,7 @@ def experiments(model_name, seed=None):
         print("ERROR")   
         print(e)
     
+    #df = add_column_to_dataframe(df, [new_column_header] + new_reflection_data, new_column_name)
     for key, val in new_reflection_data.items():
         df = add_column_to_dataframe(df, [''] + val, key)
 
