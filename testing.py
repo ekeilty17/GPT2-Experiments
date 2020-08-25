@@ -103,6 +103,11 @@ def experiments(model_name, hyperparameters=None, permutations=None):
             NUM_ITERATIONS = 1                  # number of iterations until we print results
             if index % NUM_ITERATIONS == 0:
                 Log += log_print()
+                Log += log_print("------------------------------")
+                Log += log_print(f"Iteration: {index}")
+                Log += log_print("------------------------------")
+                Log += log_print()
+                
                 for i, example in enumerate(examples):
                     Log += log_print(f"{i+1} {example}")
                 Log += log_print(query_string)
