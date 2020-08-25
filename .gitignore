@@ -133,3 +133,6 @@ data/injecting_negative_examples.csv
 
 # Mac file
 .DS_Store
+
+# test file for random stuff
+test.py
