@@ -1,0 +1,1760 @@
+
+------------------------------
+Iteration: 1
+------------------------------
+
+1 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+2 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: I appreciate you confirming my understanding OK, so smoking is pleasant and relaxing for you Are there other things that are good about smoking? If so, please tell me
+Client:  It  gives me a nice sensation.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking is relaxing.
+perm_124350: 	  Smoking is relaxing.
+perm_305124: 	  Smoking is relaxing.
+perm_543012: 	  Smoking gives you a nice sensation.
+perm_152034: 	  Smoking is relaxing.
+perm_502413: 	  It gives you a nice sensation.
+perm_521043: 	  It gives you a nice sensation.
+perm_214035: 	  Smoking is relaxing.
+perm_021453: 	  It gives you a nice sensation.
+perm_452031: 	  It gives you a nice sensation.
+
+
+------------------------------
+Iteration: 2
+------------------------------
+
+1 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+2 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+3 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  at a friends house my clothes were all stinky they said I was embarrassed
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You were embarrassed about your own smoking.
+perm_124350: 	  You were embarrassed about your own smoking.
+perm_305124: 	  You're embarrassed about the smell of your clothes.
+perm_543012: 	  You didn't want to be embarrassed.
+perm_152034: 	  You were embarrassed about the smell of your clothes.
+perm_502413: 	  You were embarrassed about the smell of cigarettes.
+perm_521043: 	  You were embarrassed about the smell of your clothes.
+perm_214035: 	  You were embarrassed about your own smoking.
+perm_021453: 	  You were embarrassed about the smell of cigarettes.
+perm_452031: 	  You're worried about how the smell of smoke affects those around you.
+
+
+------------------------------
+Iteration: 3
+------------------------------
+
+1 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: I get it, you think Nicotine dependence is both good and bad Please describe a time where you had a compelling feeling to smoke and actually smoked
+Client:  All the time everyday all day 
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You don't want to smoke because you think it's bad for you.
+perm_124350: 	  You don't want to smoke when you are feeling good.
+perm_305124: 	  You associate smoking with a feeling of being in control of your life.
+perm_543012: 	  You were able to smoke because you were able to think about the consequences of smoking.
+perm_152034: 	  You are not addicted to nicotine.
+perm_502413: 	  You were able to stop smoking because you were able to think about the bad effects of smoking.
+perm_521043: 	  You did not smoke because you felt like it.
+perm_214035: 	  You don't want to smoke because you are afraid of the consequences.
+perm_021453: 	  You were not thinking about the consequences of smoking.
+perm_452031: 	  You were able to stop smoking because you were able to think about the bad effects of smoking.
+
+
+------------------------------
+Iteration: 4
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i wasnt able to concentrate and was very ratty
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Having a ratty mind helped you to stop smoking.
+perm_124350: 	  Getting distracted by other things helped you to stop smoking.
+perm_305124: 	  Having a goal helped you to stop.
+perm_543012: 	  To be able to concentrate you need to be able to think about something other than smoking.
+perm_152034: 	  Having a goal helped you to stop smoking.
+perm_502413: 	  Having a positive attitude helped you to not smoke.
+perm_521043: 	  Having a ratty attitude helped you to not smoke.
+perm_214035: 	  You were not able to concentrate and were very ratty.
+perm_021453: 	  Being tired and being unable to concentrate helped you to not smoke.
+perm_452031: 	  To be able to concentrate you need to be able to think about something other than smoking.
+
+
+------------------------------
+Iteration: 5
+------------------------------
+
+1 Interviewer: Please express a time where you experienced social stigma but still ended up smoking
+Client:  When I was the only smoker amongst a group of friends on a night out. I smoked before we went into the theatre and they stood with me.
+Reflection: You are worried about what your friends think of your smoking.
+2 Interviewer: Please express a time where you experienced social stigma and didn't smoke
+Client:  Standing outside a church after a wedding. I couldn't see any other smokers and felt too embarrassed to smoke because of this.
+Reflection: Being around non-smokers made you not smoke.
+3 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+4 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+Interviewer: Please express a time where you experienced social stigma and didn't smoke
+Client:  when we went out with friends that didnt smoke and they hate the smell for them we held off till later
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You don't want others to judge your smoking habits.
+perm_124350: 	  You don't want to be the only smoker in the group.
+perm_305124: 	  You don't want others to judge your smoking habits.
+perm_543012: 	  You don't want to be judged by others.
+perm_152034: 	  You don't want to be seen as a smoker.
+perm_502413: 	  You don't want to be seen as a smoker.
+perm_521043: 	  You don't want others to judge your smoking habits.
+perm_214035: 	  You don't want to be seen as a smoker.
+perm_021453: 	  You don't want others to judge your smoking habits.
+perm_452031: 	  You don't want to be seen as a smoker.
+
+
+------------------------------
+Iteration: 6
+------------------------------
+
+1 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+2 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+3 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+6 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+Interviewer: I appreciate you confirming my understanding I see, you are concerned about your health Do you have more negative things about smoking? Tell me if you can think of any
+Client:  It can give you all sorts of diseases such as lung cancer.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about your health.
+perm_124350: 	  You're worried about your health.
+perm_305124: 	  You're worried about your health.
+perm_543012: 	  You're worried about your health.
+perm_152034: 	  You're worried about your health.
+perm_502413: 	  Lung cancer is something you can prevent by not smoking.
+perm_521043: 	  You're worried about the bad effects of smoking.
+perm_214035: 	  You're worried about your health.
+perm_021453: 	  You're worried about the bad effects of smoking.
+perm_452031: 	  Smoking can cause lung cancer.
+
+
+------------------------------
+Iteration: 7
+------------------------------
+
+1 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+2 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+3 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+6 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+Interviewer: I appreciate you confirming my understanding I see, you don't like the smell of cigarettes Do you have more negative things about smoking? Tell me if you can think of any
+Client:  it is harming others by second hand smoke
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  It is harmful to others by second hand smoke
+perm_124350: 	  You're worried about the smell of second hand smoke.
+perm_305124: 	  It is harming others by second hand smoke
+perm_543012: 	  You don't like the smell of second hand smoke.
+perm_152034: 	  You're worried about the smell of second hand smoke.
+perm_502413: 	  It is harmful to others by second hand smoke
+perm_521043: 	  You're worried about the smell of second hand smoke.
+perm_214035: 	  You're worried about the smell of second hand smoke.
+perm_021453: 	  It is harmful to others by second hand smoke
+perm_452031: 	  It is harming others by second hand smoke
+
+
+------------------------------
+Iteration: 8
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+3 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+6 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+Interviewer: Let me see if I recall correctly, so you think of Physical appearance as something bad about smoking Please describe a time where you thought about the effect of smoking on your appearance but ended up smoking
+Client:  i worry about my skin aging faster due to smoking
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about the effect of smoking on your appearance.
+perm_124350: 	  Smoking makes you look older.
+perm_305124: 	  You're worried about the effect of smoking on your appearance.
+perm_543012: 	  You worry about the effect of smoking on your appearance.
+perm_152034: 	  You worry about the effects of smoking on your appearance.
+perm_502413: 	  You worried about your appearance.
+perm_521043: 	  You worried about the appearance of your skin.
+perm_214035: 	  You're worried about the effects of smoking on your appearance.
+perm_021453: 	  You're worried about the effect of smoking on your appearance.
+perm_452031: 	  You worry about your appearance because you want to look younger.
+
+
+------------------------------
+Iteration: 9
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+3 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+4 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+5 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: What is it about smoking that makes it good?
+Client:  It relaxes me and gives me a sense of pleasure. 
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking is good for you.
+perm_124350: 	  Smoking is good for you because it relaxes you.
+perm_305124: 	  Smoking is good because it relaxes you.
+perm_543012: 	  Smoking is a pleasure.
+perm_152034: 	  Smoking is a pleasure.
+perm_502413: 	  Smoking is a habit that relaxes you.
+perm_521043: 	  Smoking is a habit that relaxes you.
+perm_214035: 	  Smoking is a habit that relaxes you.
+perm_021453: 	  Smoking is a habit that relaxes you.
+perm_452031: 	  Smoking is good for you.
+
+
+------------------------------
+Iteration: 10
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I was proud and not disappointed in myself. 
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You were proud of yourself for not smoking.
+perm_124350: 	  You were proud of yourself for not smoking.
+perm_305124: 	  You were proud of yourself for not smoking.
+perm_543012: 	  Being proud of yourself helped you to stop smoking.
+perm_152034: 	  You were proud of yourself for not smoking.
+perm_502413: 	  You were proud of yourself for not smoking.
+perm_521043: 	  You were proud of yourself and not ashamed of smoking.
+perm_214035: 	  You were proud of yourself for not smoking.
+perm_021453: 	  You were proud of yourself for not smoking.
+perm_452031: 	  Being proud of yourself helped you to not smoke.
+
+
+------------------------------
+Iteration: 11
+------------------------------
+
+1 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+2 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+5 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+6 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+Interviewer: Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  I had a hard time running but still continued to smoke anyhow and missed my bus
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helped you to think about the consequences of smoking.
+perm_124350: 	  Smoking helped you run.
+perm_305124: 	  You did not smoke even around other smokers.
+perm_543012: 	  You did not smoke even around other smokers.
+perm_152034: 	  You didn't want to miss your bus.
+perm_502413: 	  You did not smoke around other smokers.
+perm_521043: 	  You didn't want to miss your bus.
+perm_214035: 	  Smoking helps you think.
+perm_021453: 	  Smoking helped you to think about the consequences of smoking.
+perm_452031: 	  You did not smoke even around other smokers.
+
+
+------------------------------
+Iteration: 12
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had no release from the tension so ended up buying chewing gum
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Having a release from the tension helped you to stop smoking.
+perm_124350: 	  Chewing gum helped you to relieve stress.
+perm_305124: 	  Chewing gum helped you to relax.
+perm_543012: 	  Buying chewing gum helped you to stop smoking.
+perm_152034: 	  Chewing gum helped you to relax.
+perm_502413: 	  Chewing gum helped you to not smoke.
+perm_521043: 	  Chewing gum helped you to not smoke.
+perm_214035: 	  Chewing gum helped you relieve stress.
+perm_021453: 	  Chewing gum helped you to relax.
+perm_452031: 	  Chewing gum helped you to not smoke.
+
+
+------------------------------
+Iteration: 13
+------------------------------
+
+1 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+4 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+Interviewer: Thank you for confirming my understanding OK, so you smoke when people around you are smoking Do you have more negative things about smoking? Tell me if you can think of any
+Client:  It can make you a social outcast.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking can make you a social outcast.
+perm_124350: 	  Smoking is something you can't be a social outcast at.
+perm_305124: 	  Smoking is a social outcast.
+perm_543012: 	  You're a social outcast.
+perm_152034: 	  You are a social outcast.
+perm_502413: 	  Smoking can make you a social outcast.
+perm_521043: 	  You are a social outcast.
+perm_214035: 	  Smoking can make you a social outcast.
+perm_021453: 	  Smoking can make you a social outcast.
+perm_452031: 	  Smoking can make you a social outcast.
+
+
+------------------------------
+Iteration: 14
+------------------------------
+
+1 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+2 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+6 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  My children moaned at me as they thought I would get ill from smoking but I smoked anyway
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You did not smoke around your children.
+perm_124350: 	  You're worried about how others will learn from your smoking.
+perm_305124: 	  You were worried about your children's health.
+perm_543012: 	  You're worried about being a good role model to your children.
+perm_152034: 	  You were worried about your children's health.
+perm_502413: 	  You're worried about how others will learn from your smoking.
+perm_521043: 	  You were worried about your children's health.
+perm_214035: 	  You did not smoke even around other smokers.
+perm_021453: 	  You were worried about your children's health.
+perm_452031: 	  You're worried about how others will learn from your smoking.
+
+
+------------------------------
+Iteration: 15
+------------------------------
+
+1 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+2 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive I would like to know more about your reasoning, is it possible to use more words in your sentences What else do you find negative about smoking?
+Client:  the sheer price now is becoming very hard to pay
+Reflection: The cost of smoking is a concern for you.
+3 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+4 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+6 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+Interviewer: Sorry, I didn't understand what you said. Can you write it in a different way I'm trying to learn what you say, I'll give you options if I can't figure it out
+Client:  I like to socialise with other people who smoke.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking is a social activity.
+perm_124350: 	  Smoking is part of a routine for you.
+perm_305124: 	  You like to socialise with other people who smoke.
+perm_543012: 	  You like to socialise with other people who smoke.
+perm_152034: 	  Smoking is a social activity.
+perm_502413: 	  Smoking is something you socialise with other people.
+perm_521043: 	  Smoking is something you socialise with other people.
+perm_214035: 	  Smoking is a social activity.
+perm_021453: 	  Smoking is something you socialise with other people.
+perm_452031: 	  You like to socialise with other people who smoke.
+
+
+------------------------------
+Iteration: 16
+------------------------------
+
+1 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+2 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  I had to eat instead with my money so I went with out
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You had to eat with your money so you didn't smoke.
+perm_124350: 	  Having a goal helped you to stop smoking.
+perm_305124: 	  You did not smoke even around other smokers.
+perm_543012: 	  You did not smoke even around other smokers.
+perm_152034: 	  You didn't want to spend money on cigarettes.
+perm_502413: 	  You didn't want to smoke around others.
+perm_521043: 	  You didn't want to spend money on cigarettes.
+perm_214035: 	  You didn't want to spend money on cigarettes.
+perm_021453: 	  You didn't want to spend money on cigarettes.
+perm_452031: 	  You did not smoke even around other smokers.
+
+
+------------------------------
+Iteration: 17
+------------------------------
+
+1 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Okay, so you associate Health as something negative about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When I had a pain in my chest
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helps you think.
+perm_124350: 	  Smoking is a habit that you associate with pain.
+perm_305124: 	  Smoking helps you think.
+perm_543012: 	  You didn't want others to judge your smoking habits.
+perm_152034: 	  Smoking helps you think.
+perm_502413: 	  Smoking helps you think.
+perm_521043: 	  Smoking helps you think.
+perm_214035: 	  Smoking is part of a routine for you.
+perm_021453: 	  You did not smoke even around other smokers.
+perm_452031: 	  You did not smoke even around other smokers.
+
+
+------------------------------
+Iteration: 18
+------------------------------
+
+1 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+2 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+5 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: Let me see if I understand, you want to be a good role model for the people close to you Do you have more negative things about smoking? Tell me if you can think of any
+Client:  Aging or appearance change is always a fear
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Aging or appearance change is always a fear.
+perm_124350: 	  Aging and appearance change are always fears.
+perm_305124: 	  Aging and appearance change are always fears.
+perm_543012: 	  Aging and appearance change are fears.
+perm_152034: 	  Aging and appearance change are always fears.
+perm_502413: 	  Aging and appearance change are always fears.
+perm_521043: 	  Aging and appearance change are always fears.
+perm_214035: 	  Aging and appearance change are always fears.
+perm_021453: 	  Aging and appearance change are always fears.
+perm_452031: 	  Aging and appearance change are fears.
+
+
+------------------------------
+Iteration: 19
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+4 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+5 Interviewer: Please describe a time where you wanted to distract yourself and did without smoking
+Client:  Most of the time I distract myself with smoking honestly. If I'm at church or somewhere similar where it is not allowed I will find something to read or clean while I wait for an opportunity to take a smoke break.
+Reflection: You use smoking to distract yourself.
+6 Interviewer: Please describe a time where you missed your routinely smoke
+Client:  When I have none left at night time and the shop is shut. I feel as if I wont be able to cope. I certainly don't sleep well.
+Reflection: Not smoking makes you agitated.
+Interviewer: Please describe a time where you wanted to feel good and didn't get that through smoking
+Client:  Most of the time to be honest!
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helps you feel good.
+perm_124350: 	  Smoking made you feel good.
+perm_305124: 	  Smoking is a way to feel good.
+perm_543012: 	  Smoking is a way to feel good.
+perm_152034: 	  Smoking helped you to feel good.
+perm_502413: 	  Smoking helped you feel good.
+perm_521043: 	  Smoking helped you to feel good.
+perm_214035: 	  Smoking helps you feel good.
+perm_021453: 	  Smoking helps you feel good.
+perm_452031: 	  Smoking is a way to feel good.
+
+
+------------------------------
+Iteration: 20
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  Will power and nicotine  replacement chewing gum.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Will power and nicotine replacement gum helped you to stop smoking.
+perm_124350: 	  Will power and nicotine gum helped you to stop smoking.
+perm_305124: 	  Will power and nicotine helped you to stop smoking.
+perm_543012: 	  Will power and nicotine gum helped you to stop smoking.
+perm_152034: 	  Will power and nicotine gum helped you to stop smoking.
+perm_502413: 	  Will power and nicotine gum helped you to stop smoking.
+perm_521043: 	  Will power and nicotine gum helped you to stop smoking.
+perm_214035: 	  Will power and nicotine gum helped you to stop smoking.
+perm_021453: 	  Will power and nicotine gum helped you to stop smoking.
+perm_452031: 	  Will power and nicotine gum helped you to stop smoking.
+
+
+------------------------------
+Iteration: 21
+------------------------------
+
+1 Interviewer: Please express a time where you experienced social stigma and didn't smoke
+Client:  Standing outside a church after a wedding. I couldn't see any other smokers and felt too embarrassed to smoke because of this.
+Reflection: Being around non-smokers made you not smoke.
+2 Interviewer: Please express a time where you experienced social stigma but still ended up smoking
+Client:  When I was the only smoker amongst a group of friends on a night out. I smoked before we went into the theatre and they stood with me.
+Reflection: You are worried about what your friends think of your smoking.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+5 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+6 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+Interviewer: Okay, so you associate Stigma or shame as something negative about smoking Please express a time where you experienced social stigma but still ended up smoking
+Client:  I think its a general for any smoker smoking outside now, i dont think it is looked at as good and you do get looks for smoking even in smoking areas
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You are worried about what others will think of your smoking.
+perm_124350: 	  You're worried about how others will learn from your smoking.
+perm_305124: 	  You are worried about what others think of your smoking.
+perm_543012: 	  You are worried about what others think of your smoking.
+perm_152034: 	  You're worried about how others will learn from your smoking.
+perm_502413: 	  You're worried about how others will learn from your smoking.
+perm_521043: 	  You're worried about how others will learn from your smoking.
+perm_214035: 	  You're worried about how others will learn from your smoking.
+perm_021453: 	  You're worried about how others will learn from your smoking.
+perm_452031: 	  You are worried about what your friends think of your smoking.
+
+
+------------------------------
+Iteration: 22
+------------------------------
+
+1 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+2 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+3 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Please describe a time where you wanted to distract yourself and did without smoking
+Client:  Most of the time I distract myself with smoking honestly. If I'm at church or somewhere similar where it is not allowed I will find something to read or clean while I wait for an opportunity to take a smoke break.
+Reflection: You use smoking to distract yourself.
+6 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+Interviewer: I see, you want to be a good role model for the people close to you What else do you find negative about smoking?
+Client:  Nicotine stains on furniture and walls are not nice
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about how the smell of cigarettes affects those around you.
+perm_124350: 	  You don't want to be a bad role model for your children.
+perm_305124: 	  You don't want to be a bad role model for your children.
+perm_543012: 	  You don't want to be reminded of your smoking habits.
+perm_152034: 	  You don't want to be a bad role model for your children.
+perm_502413: 	  You don't want to be a bad role model for your children.
+perm_521043: 	  You don't want to be a bad role model for your children.
+perm_214035: 	  You're worried about how others will judge your smoking.
+perm_021453: 	  You don't want to be a bad role model for your children.
+perm_452031: 	  You're worried about the smell of cigarettes.
+
+
+------------------------------
+Iteration: 23
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+3 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+4 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+Interviewer: I see, you get pleasure from smoking What else do you find positive about smoking?
+Client:  I can concentrate more if I am smoking
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You can concentrate more if you are smoking.
+perm_124350: 	  You can concentrate better when you are smoking.
+perm_305124: 	  You can concentrate better when you are smoking.
+perm_543012: 	  You can concentrate more if you are smoking.
+perm_152034: 	  You can concentrate better when you are smoking.
+perm_502413: 	  You can concentrate better when you are smoking.
+perm_521043: 	  Smoking helps you concentrate.
+perm_214035: 	  You can concentrate more if you are smoking.
+perm_021453: 	  You can concentrate better when you are smoking.
+perm_452031: 	  Smoking helps you concentrate.
+
+
+------------------------------
+Iteration: 24
+------------------------------
+
+1 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive I would like to know more about your reasoning, is it possible to use more words in your sentences What else do you find negative about smoking?
+Client:  the sheer price now is becoming very hard to pay
+Reflection: The cost of smoking is a concern for you.
+2 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+3 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: I appreciate you confirming my understanding I understand, you like the flavour of cigarettes I would like to know more about your reasoning, is it possible to use more words in your sentences Are there other things that are good about smoking? If so, please tell me
+Client:  It helps me feel less stressed.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helps you relax.
+perm_124350: 	  It helps you relax.
+perm_305124: 	  Smoking helps you feel less stressed.
+perm_543012: 	  It helps you feel less stressed.
+perm_152034: 	  It helps you feel less stressed.
+perm_502413: 	  Smoking helps you relax.
+perm_521043: 	  It helps you feel less stressed.
+perm_214035: 	  Smoking helps you relax.
+perm_021453: 	  Smoking helps you relax.
+perm_452031: 	  Smoking helps you relax.
+
+
+------------------------------
+Iteration: 25
+------------------------------
+
+1 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+2 Interviewer: Please express a time where you experienced social stigma and didn't smoke
+Client:  Standing outside a church after a wedding. I couldn't see any other smokers and felt too embarrassed to smoke because of this.
+Reflection: Being around non-smokers made you not smoke.
+3 Interviewer: Please express a time where you experienced social stigma but still ended up smoking
+Client:  When I was the only smoker amongst a group of friends on a night out. I smoked before we went into the theatre and they stood with me.
+Reflection: You are worried about what your friends think of your smoking.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  whenever I am stressed and pacing the floors I need a cigarrette and can not control my will power
+Reflection: Being stressed increases your urge to smoke.
+6 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+Interviewer: Please describe a time where you experienced stress and didn't end up smoking
+Client:  when i couldnt smoke like when i was in public i do sometimes get anxious in large crowds but of course it wouldnt be right to smoke in public
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helps you relax.
+perm_124350: 	  Smoking helps you relax.
+perm_305124: 	  Smoking helps you relax.
+perm_543012: 	  Smoking helped you relax.
+perm_152034: 	  Smoking helps you relax.
+perm_502413: 	  Smoking helped you relax.
+perm_521043: 	  Smoking helped you relax.
+perm_214035: 	  Smoking helps you relax.
+perm_021453: 	  Smoking helps you relax.
+perm_452031: 	  Smoking helped you relax.
+
+
+------------------------------
+Iteration: 26
+------------------------------
+
+1 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+2 Interviewer: Thank you for clearing that up Do you have more positive things about smoking? Tell me if you can think of any
+Client:  It  something to look forward to doing.
+Reflection: Smoking is something you look forward to do.
+3 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+4 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: I appreciate you confirming my understanding I see, you are concerned about your health Do you have more negative things about smoking? Tell me if you can think of any
+Client:  It makes your clothes and hair smell.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about how your clothes and hair smell.
+perm_124350: 	  You're worried about the smell of your clothes and hair.
+perm_305124: 	  You're concerned about the smell of your clothes and hair.
+perm_543012: 	  You're worried about how your clothes and hair smell.
+perm_152034: 	  You're worried about the smell of your clothes and hair.
+perm_502413: 	  You're worried about the smell of your clothes and hair.
+perm_521043: 	  You're worried about the smell of your clothes and hair.
+perm_214035: 	  You're worried about the smell of your clothes and hair.
+perm_021453: 	  You're worried about how your clothes and hair smell.
+perm_452031: 	  You're worried about the smell of your clothes and hair.
+
+
+------------------------------
+Iteration: 27
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+5 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  whenever I am stressed and pacing the floors I need a cigarrette and can not control my will power
+Reflection: Being stressed increases your urge to smoke.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i felt more in control of external stuff but had a few stressful events that pushed me back down
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helped you to relax.
+perm_124350: 	  Smoking helped you to feel in control of external events.
+perm_305124: 	  Smoking helped you to control your stress.
+perm_543012: 	  Smoking helped you to feel in control of external stuff.
+perm_152034: 	  Smoking helped you to relax.
+perm_502413: 	  Smoking helped you to relax.
+perm_521043: 	  Smoking helped you to relax.
+perm_214035: 	  Smoking helped you to relax.
+perm_021453: 	  Smoking helped you to relax.
+perm_452031: 	  Smoking helped you to relax.
+
+
+------------------------------
+Iteration: 28
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I was able to do the right thing and not feel guilty
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Doing the right thing helped you to stop smoking.
+perm_124350: 	  Doing the right thing helped you to stop smoking.
+perm_305124: 	  Doing the right thing helped you stop.
+perm_543012: 	  Thinking about the right thing helped you to stop.
+perm_152034: 	  You did not feel guilty about not smoking.
+perm_502413: 	  Having a goal helped you to stop smoking.
+perm_521043: 	  Having a goal helped you to not smoke.
+perm_214035: 	  Doing the right thing helped you to not smoke.
+perm_021453: 	  To not feel guilty helped you to stop smoking.
+perm_452031: 	  To not feel guilty helped you to stop smoking.
+
+
+------------------------------
+Iteration: 29
+------------------------------
+
+1 Interviewer: Please express a time where you experienced social stigma and didn't smoke
+Client:  Standing outside a church after a wedding. I couldn't see any other smokers and felt too embarrassed to smoke because of this.
+Reflection: Being around non-smokers made you not smoke.
+2 Interviewer: Please express a time where you experienced social stigma but still ended up smoking
+Client:  When I was the only smoker amongst a group of friends on a night out. I smoked before we went into the theatre and they stood with me.
+Reflection: You are worried about what your friends think of your smoking.
+3 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+4 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: Let me see if I recall correctly, so you think of Stigma or shame as something bad about smoking Please express a time where you experienced social stigma but still ended up smoking
+Client:  Out with friends. The only smoker. Had to go outside in the cold to smoke
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You were worried about how others would judge you.
+perm_124350: 	  You felt embarrassed to smoke in front of others.
+perm_305124: 	  You were able to smoke because you were able to think about the bad effects of smoking.
+perm_543012: 	  You're worried about what others think of your smoking.
+perm_152034: 	  You were able to smoke in front of your friends.
+perm_502413: 	  You're worried about how others will learn from your smoking.
+perm_521043: 	  You're worried about how others will learn from your smoking.
+perm_214035: 	  You're worried about how others will learn from your smoking.
+perm_021453: 	  You're worried about how others will learn from your smoking.
+perm_452031: 	  You're worried about what your friends think of your smoking.
+
+
+------------------------------
+Iteration: 30
+------------------------------
+
+1 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+2 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+3 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+4 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+6 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When my daughter complained of her clothes smelling
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You didn't want to smell like a smoker.
+perm_124350: 	  You're worried about how others will judge your smoking habits.
+perm_305124: 	  You didn't smoke around your daughter.
+perm_543012: 	  You didn't smoke around other smokers.
+perm_152034: 	  You didn't want to smell like a smoker.
+perm_502413: 	  You're worried about how others will judge your smoking.
+perm_521043: 	  You're worried about how others will judge your smoking.
+perm_214035: 	  You're worried about how others will judge your smoking habits.
+perm_021453: 	  You're worried about how others will judge your smoking.
+perm_452031: 	  You're worried about how others will judge your smoking.
+
+
+------------------------------
+Iteration: 31
+------------------------------
+
+1 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+2 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  whenever I am stressed and pacing the floors I need a cigarrette and can not control my will power
+Reflection: Being stressed increases your urge to smoke.
+3 Interviewer: Please describe a time where you wanted to distract yourself and did without smoking
+Client:  Most of the time I distract myself with smoking honestly. If I'm at church or somewhere similar where it is not allowed I will find something to read or clean while I wait for an opportunity to take a smoke break.
+Reflection: You use smoking to distract yourself.
+4 Interviewer: Please describe a time where you missed your routinely smoke
+Client:  When I have none left at night time and the shop is shut. I feel as if I wont be able to cope. I certainly don't sleep well.
+Reflection: Not smoking makes you agitated.
+5 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+6 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+Interviewer: Please describe a time where you experienced stress and didn’t end up smoking
+Client:  I was in the waiting room of the emergency room and felt stressed but it was more important to stay with famioy
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Stress is a trigger for smoking.
+perm_124350: 	  Smoking helped you to stay with your family.
+perm_305124: 	  Stress made you think about smoking.
+perm_543012: 	  Smoking helps you to relax.
+perm_152034: 	  Smoking helped you to relax.
+perm_502413: 	  Smoking makes you anxious.
+perm_521043: 	  Smoking made you feel stressed.
+perm_214035: 	  Smoking helped you to stay calm.
+perm_021453: 	  Smoking made you feel stressed.
+perm_452031: 	  Smoking helps you to relax.
+
+
+------------------------------
+Iteration: 32
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+5 Interviewer: Please express a time where you experienced social stigma but still ended up smoking
+Client:  When I was the only smoker amongst a group of friends on a night out. I smoked before we went into the theatre and they stood with me.
+Reflection: You are worried about what your friends think of your smoking.
+6 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  The feeling that i was doing completely wrong, at work or in a social setting
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You were doing something wrong.
+perm_124350: 	  You were doing something wrong.
+perm_305124: 	  You are worried about what your friends think of your smoking.
+perm_543012: 	  You were doing something wrong.
+perm_152034: 	  You are worried about what your friends think of your smoking.
+perm_502413: 	  You are worried about what your friends think of your smoking.
+perm_521043: 	  You are worried about what your friends think of your smoking.
+perm_214035: 	  You were doing something wrong.
+perm_021453: 	  You are worried about what your colleagues think of your smoking.
+perm_452031: 	  You were doing something wrong.
+
+
+------------------------------
+Iteration: 33
+------------------------------
+
+1 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+2 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+3 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  whenever I am stressed and pacing the floors I need a cigarrette and can not control my will power
+Reflection: Being stressed increases your urge to smoke.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+6 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+Interviewer: Ok, so you associate Stress as something positive about smoking Please describe a time where you experienced stress and ended up smoking
+Client:  It helps me centre my thoughts and helps me think things more clearly
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Stress increases your urge to smoke.
+perm_124350: 	  Smoking helped you relax.
+perm_305124: 	  Stress increases your urge to smoke.
+perm_543012: 	  Smoking helps you relax.
+perm_152034: 	  Stress helps you think clearly.
+perm_502413: 	  Stress helps you think clearly.
+perm_521043: 	  Stress helps you think clearly.
+perm_214035: 	  Stress helps you think more clearly.
+perm_021453: 	  Stress is a good thing.
+perm_452031: 	  Smoking helps you relax.
+
+
+------------------------------
+Iteration: 34
+------------------------------
+
+1 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+6 Interviewer: Please describe a time where you wanted to distract yourself and did without smoking
+Client:  Most of the time I distract myself with smoking honestly. If I'm at church or somewhere similar where it is not allowed I will find something to read or clean while I wait for an opportunity to take a smoke break.
+Reflection: You use smoking to distract yourself.
+Interviewer: From what I gather, it seems that you think Having something in my Hand is something good about smoking Please describe a time where you smoked because you enjoy the feeling of holding a cigarette
+Client:  I get so much in the habit that i do find my hands getting very twitchy and it starts me feeling like i need another
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You use smoking to distract yourself.
+perm_124350: 	  Smoking is a habit.
+perm_305124: 	  Smoking is a habit.
+perm_543012: 	  Smoking is part of a routine for you.
+perm_152034: 	  Smoking is a habit.
+perm_502413: 	  Smoking is a habit.
+perm_521043: 	  Smoking is a habit.
+perm_214035: 	  Smoking is a habit.
+perm_021453: 	  You use smoking to distract yourself.
+perm_452031: 	  Smoking is a habit.
+
+
+------------------------------
+Iteration: 35
+------------------------------
+
+1 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+2 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: Please describe a situation where you thought about being a good role model and that cause you not to smoke
+Client:  i have really tried to stop i have focused on telling my daughter where i am wrong and why she should stay well away from smoking
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about being a good role model to your daughter.
+perm_124350: 	  You're worried about how others will learn from your smoking.
+perm_305124: 	  You're worried about your daughter's health.
+perm_543012: 	  You're worried about being a good role model to your children.
+perm_152034: 	  You're worried about how others will learn from your smoking.
+perm_502413: 	  You're worried about being a good role model to your children.
+perm_521043: 	  You're worried about how others will learn from your smoking.
+perm_214035: 	  You're worried about how others will judge your smoking habits.
+perm_021453: 	  You're worried about being a good role model to your daughter.
+perm_452031: 	  You're worried about being a good role model to your children.
+
+
+------------------------------
+Iteration: 36
+------------------------------
+
+1 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+2 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+3 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+4 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+5 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: Please desccribe a situation where you thought about being a good role model and that cause you not to smoke
+Client:  At a childrens birthday party I was detemined not to be seen as a smoker
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about being a good role model to your children.
+perm_124350: 	  You're worried about how others will learn from your smoking.
+perm_305124: 	  You're worried about being a good role model to your children.
+perm_543012: 	  You're worried about being a good role model to your children.
+perm_152034: 	  You were worried about being a good role model to your children.
+perm_502413: 	  You were able to stop smoking.
+perm_521043: 	  You were worried about being a bad role model to your children.
+perm_214035: 	  You're worried about how others will judge your smoking habits.
+perm_021453: 	  You didn't want to be seen as a smoker.
+perm_452031: 	  You're worried about how others will judge your smoking.
+
+
+------------------------------
+Iteration: 37
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+6 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  just distaction really and not staying too still
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Distraction helped you to stop smoking.
+perm_124350: 	  Distancing yourself from the habit helped you to stop.
+perm_305124: 	  Distraction helped you to stop.
+perm_543012: 	  Distraction helped you to stop.
+perm_152034: 	  Distraction is a good thing.
+perm_502413: 	  Distraction helped you to stop smoking.
+perm_521043: 	  Distraction is a good thing.
+perm_214035: 	  Distraction is a key to not smoking.
+perm_021453: 	  Just being distanced from smoking helped you to stop.
+perm_452031: 	  Distraction helped you to not smoke.
+
+
+------------------------------
+Iteration: 38
+------------------------------
+
+1 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  whenever I am stressed and pacing the floors I need a cigarrette and can not control my will power
+Reflection: Being stressed increases your urge to smoke.
+2 Interviewer: Please describe a time where you experienced stress and ended up smoking
+Client:  When I couldn't  find the tv remote anywhere. It stressed me out so I smoked instead.
+Reflection: Smoking helped you relieve stress.
+3 Interviewer: Please describe a time where you missed your routinely smoke
+Client:  When I have none left at night time and the shop is shut. I feel as if I wont be able to cope. I certainly don't sleep well.
+Reflection: Not smoking makes you agitated.
+4 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+5 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+6 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+Interviewer: Please describe a time where you experienced stress and didn't end up smoking
+Client:  When I am working, my job is quite stressful at times
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking helps you to relax.
+perm_124350: 	  Smoking is a habit that you have to deal with.
+perm_305124: 	  Smoking helps you to relax.
+perm_543012: 	  Smoking helps you to cope with stress.
+perm_152034: 	  Smoking is a habit that you have to do to get through your day.
+perm_502413: 	  Smoking helps you relax.
+perm_521043: 	  Smoking helps you to relax.
+perm_214035: 	  Smoking helps you to relax.
+perm_021453: 	  Smoking helps you to relax.
+perm_452031: 	  Smoking helps you relax.
+
+
+------------------------------
+Iteration: 39
+------------------------------
+
+1 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+2 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+Interviewer: Great! Okay. Let's now chat about the bad things about smoking What is it about smoking that makes it bad?
+Client:  The smell, The health risks, The price. The feeling of smoking makes you outcast in some places.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're outcast in some places because of the smell of smoking.
+perm_124350: 	  You're outcast in some places because of the smell of cigarettes.
+perm_305124: 	  You don't want to be outcast in some places.
+perm_543012: 	  You don't want to be outcast in some places.
+perm_152034: 	  Smoking is a social taboo.
+perm_502413: 	  You don't want to be outcast in some places.
+perm_521043: 	  You don't want to be outcast in some places.
+perm_214035: 	  You're outcast in some places because of the smell of smoking.
+perm_021453: 	  You don't want to be outcast in some places.
+perm_452031: 	  You don't want to be outcast in some places.
+
+
+------------------------------
+Iteration: 40
+------------------------------
+
+1 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+2 Interviewer: Let me see if I recall correctly, so you think of Smell as something bad about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  I worry when working in a school that the teachers and pupils think I smell of smoke
+Reflection: You're worried how the smell of smoke affects those around you.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+4 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+5 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Okay, so you associate Smell as something negative about smoking Please describe a time where you were worried about the smell of cigarettes but ended up smoking
+Client:  My stepdad hates the smell of cigarettes so I do my best to try to avoid smelling like smoke even though I am a smoker. Mainly out of respect and understanding that it's not the best smell in the world.
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You're worried about how others will judge your smoking habits.
+perm_124350: 	  You're worried about how others will judge your smoking habits.
+perm_305124: 	  You did not smoke even around other smokers.
+perm_543012: 	  You're worried about how others will judge your smoking habits.
+perm_152034: 	  You're worried about how others will judge your smoking habits.
+perm_502413: 	  You're worried about how others will learn from your smoking.
+perm_521043: 	  You're worried about how others will learn from your smoking.
+perm_214035: 	  You're worried about how others will judge your smoking habits.
+perm_021453: 	  You're worried about how others will learn from your smoking.
+perm_452031: 	  You're worried about how others will judge your smoking habits.
+
+
+------------------------------
+Iteration: 41
+------------------------------
+
+1 Interviewer: Thank you for confirming my understanding I see, you think that cigarettes are expensive Are there other things that are bad about smoking? If so, please tell me
+Client:  It gives off a bad example to my children
+Reflection: You're worried about being a good role model to your children.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+4 Interviewer: Let me see if I recall correctly, so you think of Poor role model as something bad about smoking Please describe a situation where you thought about wanting to be a good role model but ended up smoking
+Client:  i am a mother i never smoke in front of my daughter i go outside and never smoke in front of her
+Reflection: You're worried about how others will learn from your smoking.
+5 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+6 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+Interviewer: What is good about smoking?
+Client:  its more the habit of holding the cigarette and reading outside when i do
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Smoking is a habit of holding the cigarette and reading outside.
+perm_124350: 	  Smoking is a habit.
+perm_305124: 	  Smoking is a habit that you hold.
+perm_543012: 	  Smoking is a habit that you do regularly.
+perm_152034: 	  Smoking is a habit.
+perm_502413: 	  Smoking is a habit that you hold.
+perm_521043: 	  Smoking is a habit.
+perm_214035: 	  Smoking is a habit.
+perm_021453: 	  Smoking is a habit.
+perm_452031: 	  Smoking is a habit.
+
+
+------------------------------
+Iteration: 42
+------------------------------
+
+1 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+3 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+6 Interviewer: Ok, so you associate Routine as something positive about smoking Please describe a time where you smoked routinely without thinking about it
+Client:  i read a awful lot and have got into the habbit of reading my book outside with a cup of tea.  This i think is the worst thing as i associate it as the habit of doing all together
+Reflection: Smoking is part of a routine for you.
+Interviewer: Okay, so you associate Health as something negative about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  I recently had a cervical cancer scare
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You were worried about the health consequences of smoking.
+perm_124350: 	  Smoking is part of a routine for you.
+perm_305124: 	  Smoking helps you think.
+perm_543012: 	  You didn't smoke even around other smokers.
+perm_152034: 	  Smoking helps you think.
+perm_502413: 	  Smoking helps you think.
+perm_521043: 	  Smoking helps you think.
+perm_214035: 	  Cancer scares you.
+perm_021453: 	  You did not smoke around other smokers.
+perm_452031: 	  You did not smoke even around other smokers.
+
+
+------------------------------
+Iteration: 43
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+3 Interviewer: Please describe a time where you thought about the cost of smoking and it prevented it you from smoking a cigarette
+Client:  When I was saving up to go abroad it was a real intensive not to smoke. 
+Reflection: Having a goal helped you to smoke less.
+4 Interviewer: From what I gather, it seems that you think Health is something bad about smoking Please describe a time where you contemplated the consequences of smoking on your health and ended up smoking
+Client:  When a friend was diagnosed with COPD. Thought about my own health
+Reflection: Your friend's health made you think about your own smoking.
+5 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: Please describe a time where you contemplated the consequences of smoking on your health and then did not smoke that time
+Client:  i have been trying to kick the habit with vape but so far havent succeeded
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  You didn't smoke because you were worried about the consequences of smoking.
+perm_124350: 	  You didn't want to smoke.
+perm_305124: 	  You did not smoke.
+perm_543012: 	  You did not smoke because you thought about the consequences of smoking.
+perm_152034: 	  You didn't think about the consequences of smoking.
+perm_502413: 	  You did not smoke.
+perm_521043: 	  You thought about the consequences of smoking and ended up smoking.
+perm_214035: 	  You didn't want others to judge your smoking habits.
+perm_021453: 	  You did not smoke.
+perm_452031: 	  You did not smoke even around other smokers.
+
+
+------------------------------
+Iteration: 44
+------------------------------
+
+1 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I just thought of all the bad things that smoking does and it was enough for me to not smoke
+Reflection: Thinking about the bad effects of smoking helped you stop.
+2 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  I had more of a positive and determined attitude. 
+Reflection: Feeling positive and determined helped you to not smoke.
+3 Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i tried to keep myself distracted by doing things other than routine
+Reflection: Doing something outside your routine helped you to not smoke.
+4 Interviewer: Please describe a time where you were with other smokers and you didn't smoked
+Client:  When I was trying to cut down on the amount I smoked I reffused to smoke just because they were.
+Reflection: You did not smoke even around other smokers.
+5 Interviewer: Please describe a time where you smoked routinely without thinking about it
+Client:  When I've got a lot on my mind I feel as if it gives me the go ahead to smoke. I don't even know how many I smoke during these periods.
+Reflection: Smoking helps you think.
+6 Interviewer: Please describe a time where you were worried about the smell of cigarettes and you didn't smoke
+Client:  When I was going to my doctor. I refrained from smoking on the way so she wouldn't smell it and be reminded to lecture me about smoking.
+Reflection: You don't want others to judge your smoking habits.
+Interviewer: Think back to the time when you were able to prevent yourself from smoking. What made it different from when you did smoke?
+Client:  i havent been able to completely stop so far i didnt like the feel of the vape in my mouth and it didnt feel the same in my hand
+Reflection: 
+
+hyperparameters: {'num_shots': 6, 'num_perms': 10, 'seed': 100, 'top_k': 100, 'top_p': 0.6, 'repetition_penalty': 1.0, 'definition': 0}
+
+perm_012345: 	  Vaping is a better alternative to smoking.
+perm_124350: 	  vaping helped you to stop smoking.
+perm_305124: 	  Vaping helps you think.
+perm_543012: 	  Vaping helped you to not smoke.
+perm_152034: 	  Vaping helps you think.
+perm_502413: 	  Vaping is a healthier alternative to smoking.
+perm_521043: 	  Vaping helps you to stop smoking.
+perm_214035: 	  Vaping is a healthier alternative to smoking.
+perm_021453: 	  Vaping is a better alternative to smoking.
+perm_452031: 	  Vaping is a better alternative to smoking.
+

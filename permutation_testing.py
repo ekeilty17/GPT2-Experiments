@@ -1,34 +1,10 @@
 import numpy as np
-import torch
+import pandas as pd
 from tqdm import tqdm
-import random
 
 from data_processing import *
 from gpt2 import *
-
-def convert_example_to_formatted_string(inp, reflection='', delimiter='\n'):
-    prompt, response = inp
-
-    out  = f"Interviewer: {prompt}{delimiter}"
-    out += f"Client: {response}{delimiter}"
-    out += f"Reflection: {reflection}"
-    return out
-
-def reflection_definition():
-    return  "Make a short statement about smoking that reflects the meaning of the Client:"
-
-def clean_reflection(generated_reflection):
-    lines = generated_reflection.split('\n')
-    return lines[0]
-
-def add_column_to_dataframe(df, data, column_name):
-    if len(data) > len(df):
-        data = data[:len(df)]
-    elif len(data) < len(df):
-        data += [''] * (len(df) - len(data))
-    
-    df.insert(len(df.columns), column_name, data)
-    return df
+from testing_lib import *
 
 def generate_permutations(num_perms, num_shots, first=True):
     if not 0 < num_perms < np.math.factorial(num_shots):
@@ -43,18 +19,14 @@ def generate_permutations(num_perms, num_shots, first=True):
 
     return permutations
 
-def log_print(string=''):
-    print(string)
-    return string + '\n'
-
-def experiments(model_name, hyperparameters=None, permutations=None):
+def permutation_experiments(model_name, hyperparameters, permutations):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
 
     # loading dataframes
     df, primer_df, primer_embeddings = get_reflection_data()
-    
+
     # holds all reflections, will be added to df later
     generated_reflection_by_permutation = { f"perm_{''.join(map(str, perm))}": [] for perm in permutations }
 
@@ -137,47 +109,3 @@ def experiments(model_name, hyperparameters=None, permutations=None):
         g.write(Log)
 
     return df
-
-
-""" -------------------- main -------------------- """
-
-import argparse
-import pathlib
-
-SEED = 100
-random.seed(SEED)
-np.random.seed(SEED)
-if not SEED is None:
-    torch.manual_seed(SEED)
-
-if __name__ == "__main__":
-    # parse command line arguments
-    parser = argparse.ArgumentParser(description='Testing Simple Reflection Generation')
-    parser.add_argument('-model', type=str, default='gpt2',
-                        help="Model name")
-    args = parser.parse_args()
-
-    # hyperparameters for GPT2
-    NUM_SHOTS = 6
-    NUM_PERMS = 5
-    hyperparameters = {
-        "num_shots": NUM_SHOTS,
-        "num_perms": NUM_PERMS,
-        "seed": SEED,
-        "top_k": 100,
-        "top_p": 0.6,
-        "repetition_penalty": 1.0,
-        "definition": 0
-    }
-
-    # permutations for primers
-    permutations = generate_permutations(NUM_PERMS, NUM_SHOTS)
-
-    print("Begin Experiments...")
-    df = experiments(   args.model, 
-                        hyperparameters=hyperparameters, 
-                        permutations=permutations
-                    )
-
-    print("Saving to csv...")
-    df.to_csv('generated_data/reflection_experiments.csv')
