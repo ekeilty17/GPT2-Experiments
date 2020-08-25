@@ -45,7 +45,7 @@ def generate_permutations(num_perms, num_shots, first=True):
 
 def log_print(string=''):
     print(string)
-    return '\n' if string == '' else string
+    return string + '\n'
 
 def experiments(model_name, hyperparameters=None, permutations=None):
 
@@ -127,6 +127,7 @@ def experiments(model_name, hyperparameters=None, permutations=None):
         df = add_column_to_dataframe(df, reflections, perm_str)
 
     # saving log file
+    print("Saving log file...")
     with open("Log.txt", "w+") as g:
         g.write(Log)
 
@@ -153,7 +154,7 @@ if __name__ == "__main__":
 
     # hyperparameters for GPT2
     NUM_SHOTS = 6
-    NUM_PERMS = 2
+    NUM_PERMS = 5
     hyperparameters = {
         "num_shots": NUM_SHOTS,
         "num_perms": NUM_PERMS,
