@@ -43,7 +43,11 @@ def generate_permutations(num_perms, num_shots, first=True):
 
     return permutations
 
-def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
+def log_print(string=''):
+    print(string)
+    return '\n' if string == '' else string
+
+def experiments(model_name, hyperparameters=None, permutations=None):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
@@ -53,6 +57,9 @@ def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
     
     # holds all reflections, will be added to df later
     generated_reflection_by_permutation = { f"perm_{''.join(map(str, perm))}": [] for perm in permutations }
+
+    # Log string
+    Log = ""
 
     # a try-except statement so you can do control C to stop early and it will save the progress
     try:
@@ -95,29 +102,33 @@ def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
             # logging output
             NUM_ITERATIONS = 1                  # number of iterations until we print results
             if index % NUM_ITERATIONS == 0:
-                print()
+                Log += log_print()
                 for i, example in enumerate(examples):
-                    print(i+1, example, '\n')
-                print(query_string)
+                    Log += log_print(f"{i+1} {example}")
+                Log += log_print(query_string)
                 
-                print()
-                print("hyperparameters:", hyperparameters)
-                print()
+                Log += log_print()
+                Log += log_print(f"hyperparameters: {hyperparameters}")
+                Log += log_print()
                 
                 for perm_str, generated_reflections in generated_reflection_by_permutation.items():
-                    print(f"{perm_str}: \t {generated_reflections[-1]}")
-                print()
+                    Log += log_print(f"{perm_str}: \t {generated_reflections[-1]}")
+                Log += log_print()
 
     except (KeyboardInterrupt, SystemExit):
         # This way the code will still save the data if an interrupt occurs
         pass
     except Exception as e: 
-        print("ERROR")   
-        print(e)
+        Log += log_print("ERROR")   
+        Log += log_print(e)
     
     # saving to dataframe
     for perm_str, reflections in generated_reflection_by_permutation.items():
         df = add_column_to_dataframe(df, reflections, perm_str)
+
+    # saving log file
+    with open("Log.txt", "w+") as g:
+        g.write(Log)
 
     return df
 
@@ -146,6 +157,7 @@ if __name__ == "__main__":
     hyperparameters = {
         "num_shots": NUM_SHOTS,
         "num_perms": NUM_PERMS,
+        "seed": SEED,
         "top_k": 100,
         "top_p": 0.6,
         "repetition_penalty": 1.0,
@@ -158,8 +170,7 @@ if __name__ == "__main__":
     print("Begin Experiments...")
     df = experiments(   args.model, 
                         hyperparameters=hyperparameters, 
-                        permutations=permutations, 
-                        seed=SEED
+                        permutations=permutations
                     )
 
     print("Saving to csv...")
