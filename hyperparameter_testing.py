@@ -83,6 +83,7 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
                 for i, example in enumerate(examples):
                     Log += log_print(f"{i+1} {example}")
                 Log += log_print(query_string)
+                Log += log_print()
                 
                 Log += log_print(f"hyperparmater names: {list(hp_names)}")
                 for hp_str, generated_reflections in generated_reflection_by_hyperparameter.items():
