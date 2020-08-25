@@ -25,7 +25,7 @@ if __name__ == "__main__":
     df = experiments(args.model, SEED)
 
     print("Saving to csv...")
-    df.to_csv('data/reflection_experiments.csv', index=True)
+    df.to_csv('data/reflection_experiments_bert_score.csv', index=True)
     
     """
     paraphrase_opts = AttrDict()

@@ -5,7 +5,7 @@ import torch
 def load_model(model_name="gpt2"):
     print("Loading Tokenizer...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    print(f"Loading model '{model_name}'...")
+    print("Loading model...")
     model = AutoModelWithLMHead.from_pretrained(model_name)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  
     model = model.to(device)
@@ -35,3 +35,32 @@ def get_gpt2_output(model, tokenizer, device, text,
 
 def get_gpt2_generated_output(gpt2_input, gpt2_output):
     return gpt2_output[len(gpt2_input):]
+
+if __name__ == "__main__":
+    from data_processing import *
+
+    df, data = get_paired_reviewed_data()
+    examples = get_n_examples(data, 4)
+    
+    primers = [convert_example_to_formatted_string(inp, label) for inp, label in examples]
+    text = '\n\n'.join(primers)
+   
+    output = get_reflection_from_gpt2_output(text)
+    
+    """
+    import inspect
+
+    def get_default_args(func):
+        signature = inspect.signature(func)
+        return {
+            k: v.default
+            for k, v in signature.parameters.items()
+            if v.default is not inspect.Parameter.empty
+        }
+    
+    model, tokenizer, device = load_model()
+
+    source = inspect.getsource(model.generate)
+
+    print(source)
+    """

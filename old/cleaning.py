@@ -3,7 +3,7 @@ import pandas as pd
 def clean_reflection(generated_reflection):
     lines = generated_reflection.split('\n')
     return lines[0]
-
+"""
 if __name__ == "__main__":
     df = pd.read_csv("data/prepended_definition.csv", index_col=0)
 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     df.insert(len(df.columns), "cleaned_reflection", cleaned_reflections, True)
 
     df.to_csv('data/prepended_definition_cleaned.csv', index=False)
-
+"""
 def is_duplicate(df, prompt, response):
     return (prompt in df['prompt'].values) and (response in df['response'].values)
 
