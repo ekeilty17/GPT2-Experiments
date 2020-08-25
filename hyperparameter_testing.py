@@ -68,7 +68,7 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
                 hp_str = str(hyperparameters)
 
                 # saving to dictionary
-                generated_reflection_by_permutation[hp_str].append(generated_reflection)
+                generated_reflection_by_hyperparameter[hp_str].append(generated_reflection)
 
 
             # logging output
@@ -95,10 +95,10 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
         pass
     except Exception as e: 
         Log += log_print("ERROR")   
-        Log += log_print(e)
+        Log += log_print(str(e))
     
     # saving to dataframe
-    for perm_str, reflections in generated_reflection_by_permutation.items():
+    for perm_str, reflections in generated_reflection_by_hyperparameter.items():
         df = add_column_to_dataframe(df, reflections, perm_str)
 
     # saving log file

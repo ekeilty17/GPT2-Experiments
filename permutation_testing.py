@@ -97,7 +97,7 @@ def permutation_experiments(model_name, hyperparameters, permutations, *args, **
         pass
     except Exception as e: 
         Log += log_print("ERROR")   
-        Log += log_print(e)
+        Log += log_print(str(e))
     
     # saving to dataframe
     for perm_str, reflections in generated_reflection_by_permutation.items():
