@@ -19,7 +19,7 @@ def generate_permutations(num_perms, num_shots, first=True):
 
     return permutations
 
-def permutation_experiments(model_name, hyperparameters, permutations):
+def permutation_experiments(model_name, hyperparameters, permutations, *args, **kwargs):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
@@ -51,7 +51,7 @@ def permutation_experiments(model_name, hyperparameters, permutations):
             # adding definition if necessary
             if hyperparameters["definition"]:
                 examples = [reflection_definition() + '\n' + example for example in examples]
-                query_str = reflection_definition() + '\n' + query_str
+                query_string = reflection_definition() + '\n' + query_string
 
             # getting set of reflections corresponding to each permutation
             reflections = []
