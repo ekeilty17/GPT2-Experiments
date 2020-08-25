@@ -17,6 +17,9 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
     # loading dataframes
     df, primer_df, primer_embeddings = get_reflection_data()
     
+    NUM_SHOTS = hyperparameters["num_shots"]
+    DEFINITION = hyperparameters["definition"]
+
     # pre-processing the hyperparameter dictionary to make things easier to iterate over
     hyperparameters = {key: val if type(val) == list else [val] for key, val in hyperparameters.items()}
 
@@ -39,24 +42,24 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
 
         for index, row in tqdm(df.iterrows()):
 
+            # getting dataframe of NUM_SHOTS closest examples
+            examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, NUM_SHOTS)
+            
+            # convert dataframe to list of strings
+            examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
+                            for _, ex_row in examples.iterrows()]
+            
+            # convert row we want to generate a reflection of to a string
+            query_string = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
+
+            # adding definition if necessary
+            if DEFINITION:
+                examples = [reflection_definition() + '\n' + example for example in examples]
+                query_string = reflection_definition() + '\n' + query_string
+
             # getting set of reflections corresponding to each permutation
             reflections = []
             for hyperparameters in hyperparameter_list:
-
-                # getting dataframe of NUM_SHOTS closest examples
-                examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, hyperparameters["num_shots"])
-                
-                # convert dataframe to list of strings
-                examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
-                                for _, ex_row in examples.iterrows()]
-                
-                # convert row we want to generate a reflection of to a string
-                query_string = convert_example_to_formatted_string( (row["prompt"], row["response"]) )
-
-                # adding definition if necessary
-                if hyperparameters["definition"]:
-                    examples = [reflection_definition() + '\n' + example for example in examples]
-                    query_string = reflection_definition() + '\n' + query_string
 
                 # generating reflection
                 gpt2_input = "\n\n".join(examples + [query_string])

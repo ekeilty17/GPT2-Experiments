@@ -54,11 +54,11 @@ def run_grid_search(model_name):
         "num_shots": NUM_SHOTS,
         "num_perms": NUM_PERMS,
         "seed": SEED,
-        "top_k": 100,
-        "top_p": [0.2, 0.5, 0.8, 1.0],
+        "top_k": [10, 100],
+        "top_p": [0.2, 0.5, 1.0],
         "repetition_penalty": 1.0,
         "definition": 0,
-        "temperature": [0.1, 0.3, 0.5]
+        "temperature": [0.2, 0.5, 1.0]
     }
 
     print("Begin Experiments...")
