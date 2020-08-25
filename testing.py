@@ -78,13 +78,19 @@ def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
             reflections = []
             for perm in permutations:
                 examples_permuted = [examples[p] for p in perm]
-            
+
+                # generating reflection
                 gpt2_input = "\n\n".join(examples_permuted + [query_string])
                 gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
                 generated_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
                 
+                # putting data into nicer format
                 generated_reflection = clean_reflection(generated_reflection)
-                reflections.append(generated_reflection)
+                perm_str = f"perm_{''.join(map(str, perm))}"
+
+                # saving to dictionary
+                generated_reflection_by_permutation[perm_str].append(generated_reflection)
+
 
             # logging output
             NUM_ITERATIONS = 1                  # number of iterations until we print results
@@ -95,16 +101,12 @@ def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
                 print(query_string)
                 
                 print()
-                #print(hyperparameters)
-                #print()
-                
-                for generated_reflection in reflections:
-                    print(f"perm_{''.join(map(str, perm))}: \t {generated_reflection}")
+                print("hyperparameters:", hyperparameters)
                 print()
-
-            # adding reflection to master dictionary
-            for reflection, perm in zip(reflections, permutations):
-                generated_reflection_by_permutation[f"perm_{''.join(map(str, perm))}"].append(reflection)
+                
+                for perm_str, generated_reflections in generated_reflection_by_permutation.items():
+                    print(f"{perm_str}: \t {generated_reflections[-1]}")
+                print()
 
     except (KeyboardInterrupt, SystemExit):
         # This way the code will still save the data if an interrupt occurs
@@ -114,8 +116,8 @@ def experiments(model_name, hyperparameters=None, permutations=None, seed=None):
         print(e)
     
     # saving to dataframe
-    for key, val in generated_reflection_by_permutation.items():
-        df = add_column_to_dataframe(df, val, key)
+    for perm_str, reflections in generated_reflection_by_permutation.items():
+        df = add_column_to_dataframe(df, reflections, perm_str)
 
     return df
 
