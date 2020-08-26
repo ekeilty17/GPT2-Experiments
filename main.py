@@ -48,15 +48,15 @@ def run_permutation_experiment(model_name):
 def run_grid_search(model_name):
     
     # hyperparameters for GPT2
-    NUM_SHOTS = 6
+    NUM_SHOTS = 3
     hyperparameters = {
         "num_shots": NUM_SHOTS,
         "seed": SEED,
         "top_k": [10, 100],
-        "top_p": [0.2, 0.5, 1.0],
-        "repetition_penalty": 1.0,
+        "top_p": [0.2, 1.0],
+        "repetition_penalty": [1.0, 2.0],
         "definition": 0,
-        "temperature": [0.2, 0.5, 1.0]
+        "temperature": [0.2, 1.0]
     }
 
     print("Begin Experiments...")

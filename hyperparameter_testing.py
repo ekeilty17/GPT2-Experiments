@@ -34,7 +34,7 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
     # holds all reflections, will be added to df later
     #       I couldn't think of a better unique identifier other than just using the string version of the hyperparmater dictionary
     #       I could have used a tuple of it, but then we lose the names
-    generated_reflection_by_hyperparameter = { str(hyperparameters): [] for hyperparameters in hyperparameter_list }
+    generated_reflection_by_hyperparameter = { str(hp): [] for hp in hyperparameter_list }
 
     # Log string
     Log = ""
@@ -46,8 +46,8 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
 
             """ Really everything here should be in the below for loop, but I'm just trying to save computation time """
             # getting dataframe of NUM_SHOTS closest examples
-            #examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, NUM_SHOTS)
-            examples = get_n_random_examples(NUM_SHOTS, primer_df, SEED)
+            #examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, max(hyperparameters["num_shots"]))
+            examples = get_n_random_examples(primer_df, max(hyperparameters["num_shots"]), SEED)
 
             # convert dataframe to list of strings
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
@@ -62,20 +62,20 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
                 query_string = reflection_definition() + '\n' + query_string
 
             # getting set of reflections corresponding to each permutation
-            reflections = []
-            for hyperparameters in hyperparameter_list:
+            for hp in hyperparameter_list:
 
                 # generating reflection
-                gpt2_input = "\n\n".join(examples + [query_string])
-                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
+                gpt2_input = "\n\n".join(examples[:hp["num_shots"]] + [query_string])
+                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hp)
                 generated_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
                 
                 # putting data into nicer format
                 generated_reflection = clean_reflection(generated_reflection)
-                hp_str = str(hyperparameters)
+                hp_str = str(hp)
 
                 # saving to dictionary
                 generated_reflection_by_hyperparameter[hp_str].append(generated_reflection)
+                print(generated_reflection)
 
 
             # logging output

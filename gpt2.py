@@ -13,9 +13,18 @@ def load_model(model_name="gpt2"):
     return model, tokenizer, device
 
 def get_gpt2_output(model, tokenizer, device, text, 
-                    temperature=0.175, repetition_penalty=1.0, top_k=100, top_p=0.8, max_len=100, seed=None,
+                    temperature=0.175, repetition_penalty=1.0, top_k=100, top_p=0.8, max_len=50, seed=None,
                     *args, **kwargs):
     
+    #print(tokenizer.encode("\n"))
+
+    print("temperature:", temperature)
+    print("repetition_penalty:", repetition_penalty)
+    print("top_k:", top_k)
+    print("top_p:", top_p)
+    print("seed:", seed)
+
+    #tokenizer.eos_token_id = tokenizer.encode("\n")
     tokenized_text = tokenizer.encode(text, return_tensors="pt")
     tokenized_text = tokenized_text.to(device)
     summary_ids = model.generate(   tokenized_text,
@@ -35,3 +44,8 @@ def get_gpt2_output(model, tokenizer, device, text,
 
 def get_gpt2_generated_output(gpt2_input, gpt2_output):
     return gpt2_output[len(gpt2_input):]
+
+if __name__ == "__main__":
+    model, tokenizer, device = load_model()
+    print(tokenizer.eos_token_id)
+    print(tokenizer.encode("\n"))

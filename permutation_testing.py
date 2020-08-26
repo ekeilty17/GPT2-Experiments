@@ -54,7 +54,6 @@ def permutation_experiments(model_name, hyperparameters, permutations, *args, **
                 query_string = reflection_definition() + '\n' + query_string
 
             # getting set of reflections corresponding to each permutation
-            reflections = []
             for perm in permutations:
                 examples_permuted = [examples[p] for p in perm]
 
