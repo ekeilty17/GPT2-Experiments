@@ -19,6 +19,7 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
     
     NUM_SHOTS = hyperparameters["num_shots"]
     DEFINITION = hyperparameters["definition"]
+    SEED = hyperparameters["seed"]
 
     # pre-processing the hyperparameter dictionary to make things easier to iterate over
     hyperparameters = {key: val if type(val) == list else [val] for key, val in hyperparameters.items()}
@@ -43,8 +44,9 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
         for index, row in tqdm(df.iterrows()):
 
             # getting dataframe of NUM_SHOTS closest examples
-            examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, NUM_SHOTS)
-            
+            #examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, NUM_SHOTS)
+            examples = get_n_random_examples(n, SEED)
+
             # convert dataframe to list of strings
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
                             for _, ex_row in examples.iterrows()]

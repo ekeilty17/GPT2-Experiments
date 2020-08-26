@@ -49,10 +49,8 @@ def run_grid_search(model_name):
     
     # hyperparameters for GPT2
     NUM_SHOTS = 6
-    NUM_PERMS = 5
     hyperparameters = {
         "num_shots": NUM_SHOTS,
-        "num_perms": NUM_PERMS,
         "seed": SEED,
         "top_k": [10, 100],
         "top_p": [0.2, 0.5, 1.0],
