@@ -31,7 +31,7 @@ def get_reflection_data():
 def consine_similarity(t1, t2, axis=-1):
     return tf.keras.losses.cosine_similarity(t1, t2, axis=axis)
 
-def get_n_random_examples(n, seed):
+def get_n_random_examples(primer_df, n, seed):
     return primer_df.sample(n=n, random_state=seed)
 
 def get_n_best_examples(string, primer_df, primer_embeddings, n):

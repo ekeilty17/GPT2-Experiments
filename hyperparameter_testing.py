@@ -17,6 +17,7 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
     # loading dataframes
     df, primer_df, primer_embeddings = get_reflection_data()
     
+    """ These are hyperparameters that I am treating as constant for now """
     NUM_SHOTS = hyperparameters["num_shots"]
     DEFINITION = hyperparameters["definition"]
     SEED = hyperparameters["seed"]
@@ -43,9 +44,10 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
 
         for index, row in tqdm(df.iterrows()):
 
+            """ Really everything here should be in the below for loop, but I'm just trying to save computation time """
             # getting dataframe of NUM_SHOTS closest examples
             #examples = get_n_best_examples(get_prompt_response_string(row), primer_df, primer_embeddings, NUM_SHOTS)
-            examples = get_n_random_examples(n, SEED)
+            examples = get_n_random_examples(NUM_SHOTS, primer_df, SEED)
 
             # convert dataframe to list of strings
             examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
