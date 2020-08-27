@@ -6,7 +6,12 @@ This repository is used to send code to a cloud server in order to do very labor
 
 go into `main.py` and comment/uncomment the experiment you would like to run. Then in the commandline you can specify which gpt2 model you would like to run. For example
 ```
-$ python3 main.py -model gpt2-xl
+$ python3 main.py --model gpt2-xl
+```
+
+You can include debugging logging by adding this tag
+```
+$ python3 main.py --debug
 ```
 
 ## Creating Cloud Server

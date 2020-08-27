@@ -75,7 +75,7 @@ def permutation_experiments(model_name, hyperparameters, permutations, debug=Fal
                     print(hp)
                     print(gpt2_input)
                     print(cleaned_generated_reflection)
-                    print(generate_reflection[len(cleaned_generated_reflection):])
+                    print(generated_reflection[len(cleaned_generated_reflection):])
                     print("---------------  END DEBUG  --------------- ")
                     print()
 

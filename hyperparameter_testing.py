@@ -81,7 +81,7 @@ def hyperparameter_experiments(model_name, hyperparameters, debug=False):
                     print(hp)
                     print(gpt2_input)
                     print(cleaned_generated_reflection)
-                    print(generate_reflection[len(cleaned_generated_reflection):])
+                    print(generated_reflection[len(cleaned_generated_reflection):])
                     print("---------------  END DEBUG  --------------- ")
                     print()
 
