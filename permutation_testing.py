@@ -19,7 +19,7 @@ def generate_permutations(num_perms, num_shots, first=True):
 
     return permutations
 
-def permutation_experiments(model_name, hyperparameters, permutations, *args, **kwargs):
+def permutation_experiments(model_name, hyperparameters, permutations, debug=False):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
@@ -59,15 +59,25 @@ def permutation_experiments(model_name, hyperparameters, permutations, *args, **
 
                 # generating reflection
                 gpt2_input = "\n\n".join(examples_permuted + [query_string])
-                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hyperparameters)
+                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, debug=debug, **hyperparameters)
                 generated_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
                 
                 # putting data into nicer format
-                generated_reflection = clean_reflection(generated_reflection)
+                cleaned_generated_reflection = clean_reflection(generated_reflection)
                 perm_str = f"perm_{''.join(map(str, perm))}"
 
                 # saving to dictionary
-                generated_reflection_by_permutation[perm_str].append(generated_reflection)
+                generated_reflection_by_permutation[perm_str].append(cleaned_generated_reflection)
+
+                if debug:
+                    print()
+                    print("--------------- BEGIN DEBUG --------------- ")
+                    print(hp)
+                    print(gpt2_input)
+                    print(cleaned_generated_reflection)
+                    print(generate_reflection[len(cleaned_generated_reflection):])
+                    print("---------------  END DEBUG  --------------- ")
+                    print()
 
 
             # logging output

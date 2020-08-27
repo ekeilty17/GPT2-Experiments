@@ -9,7 +9,7 @@ from gpt2 import *
 from testing_lib import *
     
 
-def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
+def hyperparameter_experiments(model_name, hyperparameters, debug=False):
 
     # loading model
     model, tokenizer, device = load_model(model_name)
@@ -18,7 +18,6 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
     df, primer_df, primer_embeddings = get_reflection_data()
     
     """ These are hyperparameters that I am treating as constant for now """
-    NUM_SHOTS = hyperparameters["num_shots"]
     DEFINITION = hyperparameters["definition"]
     SEED = hyperparameters["seed"]
 
@@ -66,16 +65,25 @@ def hyperparameter_experiments(model_name, hyperparameters, *args, **kwargs):
 
                 # generating reflection
                 gpt2_input = "\n\n".join(examples[:hp["num_shots"]] + [query_string])
-                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, **hp)
+                gpt2_output = get_gpt2_output(model, tokenizer, device, gpt2_input, debug=debug, **hp)
                 generated_reflection = get_gpt2_generated_output(gpt2_input, gpt2_output)
                 
                 # putting data into nicer format
-                generated_reflection = clean_reflection(generated_reflection)
+                cleaned_generated_reflection = clean_reflection(generated_reflection)
                 hp_str = str(hp)
 
                 # saving to dictionary
-                generated_reflection_by_hyperparameter[hp_str].append(generated_reflection)
-                print(generated_reflection)
+                generated_reflection_by_hyperparameter[hp_str].append(cleaned_generated_reflection)
+                
+                if debug:
+                    print()
+                    print("--------------- BEGIN DEBUG --------------- ")
+                    print(hp)
+                    print(gpt2_input)
+                    print(cleaned_generated_reflection)
+                    print(generate_reflection[len(cleaned_generated_reflection):])
+                    print("---------------  END DEBUG  --------------- ")
+                    print()
 
 
             # logging output

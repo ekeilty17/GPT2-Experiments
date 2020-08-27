@@ -17,8 +17,8 @@ if not SEED is None:
     torch.manual_seed(SEED)
 
 
-def run_permutation_experiment(model_name):
-    
+def run_permutation_experiment(model_name, debug=False):
+
     # hyperparameters for GPT2
     NUM_SHOTS = 6
     NUM_PERMS = 5
@@ -39,14 +39,15 @@ def run_permutation_experiment(model_name):
     print("Begin Experiments...")
     df = permutation_experiments(   model_name, 
                                     hyperparameters=hyperparameters, 
-                                    permutations=permutations
+                                    permutations=permutations,
+                                    debug=debug
                                 )
 
     print("Saving to csv...")
     df.to_csv('generated_data/reflection_experiments.csv')
 
-def run_grid_search(model_name):
-    
+def run_grid_search(model_name, debug=False):
+
     # hyperparameters for GPT2
     NUM_SHOTS = 3
     hyperparameters = {
@@ -62,6 +63,7 @@ def run_grid_search(model_name):
     print("Begin Experiments...")
     df = hyperparameter_experiments(model_name,
                                     hyperparameters=hyperparameters,
+                                    debug=debug
                                 )
 
     print("Saving to csv...")
@@ -70,9 +72,9 @@ def run_grid_search(model_name):
 if __name__ == "__main__":
     # parse command line arguments
     parser = argparse.ArgumentParser(description='Testing Simple Reflection Generation')
-    parser.add_argument('-model', type=str, default='gpt2',
-                        help="Model name")
+    parser.add_argument('--model', type=str, default='gpt2', help="Model name")
+    parser.add_argument('--debug', action="store_true", default=False)
     args = parser.parse_args()
 
-    #run_permutation_experiment(args.model)
-    run_grid_search(args.model)
+    #run_permutation_experiment(args.model, args.debug)
+    run_grid_search(args.model, args.debug)
