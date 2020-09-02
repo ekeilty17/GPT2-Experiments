@@ -113,11 +113,11 @@ class GPT2ForReflections(object):
 
     def get_output(self, text):
         tokenized_text = self.tokenizer.encode(text, return_tensors="pt")
-        tokenized_text = self.tokenized_text.to(self.device)
+        tokenized_text = tokenized_text.to(self.device)
         summary_ids = self.model.generate(  tokenized_text,
                                             max_length=tokenized_text.shape[1] + self.hyperparameters["max_len"],
-                                            bos_token_id=tokenizer.bos_token_id,
-                                            pad_token_id=tokenizer.eos_token_id,
+                                            bos_token_id=self.tokenizer.bos_token_id,
+                                            pad_token_id=self.tokenizer.eos_token_id,
                                             early_stopping=True,
                                             **self.hyperparameters
                                     )
@@ -194,9 +194,10 @@ def convert_example_to_formatted_string(inp, reflection='', delimiter='\n'):
     out += f"Reflection: {reflection}"
     return out
 
-def generate_reflection(prompt, response, Primers, GPT2FR, perm='default', hyperparameters=None):
+def generate_reflection(prompt, response, Primers, GPT2FR, perm='default'):
 
     # Generating permutation
+    num_shots = GPT2FR.hyperparameters["num_shots"]
     perm = list(range(num_shots))
     if perm != 'default':
         np.random.shuffle(perm)
@@ -204,10 +205,12 @@ def generate_reflection(prompt, response, Primers, GPT2FR, perm='default', hyper
     # Getting primers
     query_string = convert_example_to_formatted_string( (prompt, response) )
     primer_examples = Primers.get_n_best_examples(query_string, num_shots)
-    
+    primer_examples = [convert_example_to_formatted_string( (ex_row["prompt"], ex_row["response"]), ex_row["reflection_human"] ) \
+                            for _, ex_row in primer_examples.iterrows()]
+
     # Getting gpt2 input
-    primer_examples_permuted = [examples[p] for p in perm]
-    gpt2_input = "\n\n".join(examples_permuted + [query_string])
+    primer_examples_permuted = [primer_examples[p] for p in perm]
+    gpt2_input = "\n\n".join(primer_examples_permuted + [query_string])
 
     # Getting reflection
     return GPT2FR(gpt2_input)
@@ -219,7 +222,7 @@ def is_good_reflection(reflection, RQC, device):
 def get_good_reflection(prompt, response, Primers, GPT2FR, RQC):
     
     while True:
-        candidate_reflection = generate_reflection(prompt, response, Primers, GPT2FR, RQC, perm="random")
+        candidate_reflection = generate_reflection(prompt, response, Primers, GPT2FR, perm="random")
         if is_good_reflection(candidate_reflection, RQC, device):
             return candidate_reflection
 
