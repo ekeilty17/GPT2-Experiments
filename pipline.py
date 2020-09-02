@@ -23,10 +23,14 @@ class PrimerManager(object):
         self.embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
         
         # I pre-process the embeddings to save computation time
-        prompt_response_strings = [get_prompt_response_string(row) for index, row in primer_df.iterrows()]
-        self.primer_embeddings = embed(prompt_response_strings)
+        prompt_response_strings = [self.get_prompt_response_string(row) for index, row in self.primer_df.iterrows()]
+        self.primer_embeddings = self.embed(prompt_response_strings)
 
         self.seed = seed
+
+    @staticmethod
+    def get_prompt_response_string(row):
+        return row['prompt'] + '\n' + row['response']
 
     @staticmethod
     def consine_similarity(t1, t2, axis=-1):
@@ -85,7 +89,7 @@ class GPT2ForReflections(object):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelWithLMHead.from_pretrained(model_name)
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.model = self.model.to(device)
+        self.model = self.model.to(self.device)
 
         default_hyperparameters = {
             "num_shots": 5,
@@ -212,10 +216,10 @@ def generate_reflection(prompt, response, Primers, GPT2FR, perm='default', hyper
 def is_good_reflection(reflection, RQC, device):
     return True
 
-def get_good_reflection(prompt, response, embed, primer_df, primer_embeddings, model, tokenizer, RQC, device):
+def get_good_reflection(prompt, response, Primers, GPT2FR, RQC):
     
     while True:
-        candidate_reflection = generate_reflection(prompt, response, embed, primer_df, primer_embeddings, model, tokenizer, device, perm="random")
+        candidate_reflection = generate_reflection(prompt, response, Primers, GPT2FR, RQC, perm="random")
         if is_good_reflection(candidate_reflection, RQC, device):
             return candidate_reflection
 
