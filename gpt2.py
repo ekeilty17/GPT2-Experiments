@@ -18,13 +18,13 @@ def get_gpt2_output(model, tokenizer, device, text,
 
     if debug:
         print()
-        print("--------------- BEGIN DEBUG --------------- ")
+        print("--------------- BEGIN DEBUG: enter `get_gpt2_output` ---------------")
         print("temperature:", temperature)
         print("repetition_penalty:", repetition_penalty)
         print("top_k:", top_k)
         print("top_p:", top_p)
         print("seed:", seed)
-        print("---------------  END DEBUG  --------------- ")
+        print("---------------  END DEBUG:  exit `get_gpt2_output`  ---------------")
         print()
 
     tokenized_text = tokenizer.encode(text, return_tensors="pt")
@@ -49,9 +49,7 @@ def get_gpt2_generated_output(gpt2_input, gpt2_output):
 
 if __name__ == "__main__":
     model, tokenizer, device = load_model()
-    print(tokenizer.eos_token_id)
-    tokenizer.eos_token_id = 198            # 198 = '\n'
-    print(tokenizer.encode("hi\nhello"))
-    print(tokenizer.encode("I am Eric\nYou are Nkem"))
-    print(tokenizer.encode("hi hello"))
+    print(tokenizer.eos_token_id)   # 50256
+    # 198 = '\n'
+    tokenizer.eos_token_id = 198    # doesn't work
     print(tokenizer.eos_token_id)

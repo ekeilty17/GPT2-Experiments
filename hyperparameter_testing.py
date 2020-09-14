@@ -77,12 +77,12 @@ def hyperparameter_experiments(model_name, hyperparameters, debug=False):
                 
                 if debug:
                     print()
-                    print("--------------- BEGIN DEBUG --------------- ")
+                    print("--------------- BEGIN DEBUG: full gpt2 output ---------------")
                     print(hp)
                     print(gpt2_input)
                     print(cleaned_generated_reflection)
                     print(generated_reflection[len(cleaned_generated_reflection):])
-                    print("---------------  END DEBUG  --------------- ")
+                    print("---------------  END DEBUG: full gpt2 output  ---------------")
                     print()
 
 

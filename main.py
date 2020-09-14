@@ -34,7 +34,12 @@ def run_permutation_experiment(model_name, debug=False):
     }
 
     # permutations for primers
-    permutations = generate_permutations(NUM_PERMS, NUM_SHOTS)
+    #permutations = generate_permutations(NUM_PERMS, NUM_SHOTS)
+    permutations = [ 
+            list("012354"), list("012435"), list("013245"), 
+            list("305142"), list("305124"), list("301524"), 
+            list("502431"), list("502143"), list("504213") 
+        ]
 
     print("Begin Experiments...")
     df = permutation_experiments(   model_name, 
